@@ -1,9 +1,7 @@
 html {
   font-size: 16px; }
-
-video {
-  width: 100%;
-  top: 0px; }
+  html body {
+    background-color: #00ffa2; }
 
 h2 {
   font-size: 1.5rem; }
@@ -11,8 +9,9 @@ h2 {
 p {
   font-size: 0.9rem; }
 
-body {
-  background-color: gold; }
+video {
+  width: 100%;
+  top: 0px; }
 
 .navbar {
   background: transparent;
@@ -35,68 +34,56 @@ body {
   padding-top: 25px;
   padding-left: 5vw;
   padding-right: 5vw; }
+  .container-fluid .h2p {
+    padding-left: 15px; }
 
-.h2p {
-  padding-left: 15px; }
-
-.social {
+.social1, .social2, .social3 {
   padding: 14px 27px;
   width: 93px;
   height: 80px;
   border-radius: 50%;
   border: 2px solid #0964c6; }
-
-.social2 {
-  padding: 14px 16px;
-  width: 85px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #0964c6; }
-
-.social3 {
-  padding: 14px 24px;
-  width: 93px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #0964c6; }
-
-.social:hover, .social2:hover, .social3:hover {
-  background-color: #75d1fc; }
+  .social1:hover, .social2:hover, .social3:hover {
+    background-color: #75d1fc; }
 
 .contimg {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px 0px; }
 
 .imagenes {
   margin: 0px;
-  padding: 0px; }
-
-.imagenes .column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 25%;
-  padding: 0px; }
-
-.imagenes .column img {
-  width: 100%; }
+  padding: 0px 30px;
+  flex-wrap: wrap; }
+  .imagenes .column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px; }
+    .imagenes .column div {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px; }
+      .imagenes .column div img {
+        width: 100%; }
 
 .sign {
   width: 90px;
   border-radius: 10%;
   opacity: 0.5; }
 
-.logo {
+footer .footer {
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  footer .footer .column {
+    width: 25%; }
+footer .logo {
   width: 20%;
   opacity: 0.5;
   border-radius: 20%; }
-
-.footer {
-  flex-wrap: nowrap;
+footer .iconos .row, footer .copyright .row {
+  width: 25%;
+  margin: 0 auto;
   justify-content: space-between; }
-
-.footer .column {
-  width: 25%; }
 
 /*# sourceMappingURL=lstride.css.map */
