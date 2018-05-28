@@ -13,6 +13,11 @@ video {
   width: 100%;
   top: 0px; }
 
+a, a:hover {
+  color: black;
+  text-decoration: none;
+  list-style: none; }
+
 .navbar {
   background: transparent;
   position: fixed;
@@ -54,18 +59,18 @@ video {
   margin: 0px;
   padding: 0px 30px;
   flex-wrap: wrap; }
-  .imagenes .column {
+  .imagenes .col {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0px; }
-    .imagenes .column div {
+    justify-content: space-between; }
+    .imagenes .col div {
       flex-shrink: 0;
-      width: 200px;
-      height: 200px; }
-      .imagenes .column div img {
-        width: 100%; }
+      width: 244px;
+      height: 135px;
+      overflow: hidden;
+      margin-bottom: 10px; }
+      .imagenes .col div img {
+        width: 95%; }
 
 .sign {
   width: 90px;
@@ -75,7 +80,7 @@ video {
 footer .footer {
   flex-wrap: nowrap;
   justify-content: space-between; }
-  footer .footer .column {
+  footer .footer .col {
     width: 25%; }
 footer .logo {
   width: 20%;
