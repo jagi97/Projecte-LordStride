@@ -1,0 +1,41 @@
+@media (min-width: 426px) and (max-width: 950px){
+    html{
+        body{
+            background-color: rgb(134, 255, 217);
+            main .carousel:last-child{
+                display: inline-block;
+            } 
+        }
+    }
+    .contimg{
+        display: none;
+    }
+
+    .well{
+        background: transparent;
+        .carousel {
+            margin-bottom: 0;
+            padding: 0 40px 30px 40px;
+            .carousel-indicators {
+                margin: 0 auto;
+                top: auto;
+                bottom: 0px;
+                li {
+                    background: #c0c0c0;
+                }
+                .active {
+                    background: #333333;
+                }
+            }
+            .carousel-inner .thumbnail img{
+                width: 800px;
+            }
+        }
+    }
+    .carousel-control {
+        left: -12px;
+    }
+    .carousel-control.right {
+        right: -12px;
+    }
+}

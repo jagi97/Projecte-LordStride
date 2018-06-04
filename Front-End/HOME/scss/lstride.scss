@@ -1,7 +1,10 @@
 html{
     font-size: 16px;
     body{
-        background-color: rgb(154, 228, 229);        
+        background-color: rgb(154, 228, 229);
+        main .carousel:last-child{
+            display: none;
+        }     
     }
 }
 
@@ -30,6 +33,7 @@ a, a:hover{
     height: 60px;
     top: 0;
     transition: top 0.2s ease-in-out;
+    z-index: 1;
 }
 
 .custom-toggler.navbar-toggler {
@@ -53,24 +57,21 @@ a, a:hover{
     }
 }
 
-// @mixin social{
-//     padding: 14px 27px;
-//     width: 93px;
-//     height: 80px;
-//     border-radius: 50%;
-//     border: 2px solid #0964c6;
-//     &:hover{
-//         background-color:  #75d1fc;
-//     }
-// }
-
-// .social1, .social2, .social3{
-//     @include social;
-// }
-
-svg{
-    z-index: 1;
+@mixin social{
+    padding: 14px 27px;
+    width: 93px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #0964c6;
+    &:hover{
+        background-color:  #75d1fc;
+    }
 }
+
+.social1, .social2, .social3{
+    @include social;
+}
+
 
 @mixin mgpddzero($padding:0px 0px) {
     margin: 0px;

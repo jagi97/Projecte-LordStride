@@ -2,6 +2,8 @@ html {
   font-size: 16px; }
   html body {
     background-color: #9ae4e5; }
+    html body main .carousel:last-child {
+      display: none; }
 
 h2 {
   font-size: 1.5rem; }
@@ -24,7 +26,8 @@ a, a:hover {
   width: 100%;
   height: 60px;
   top: 0;
-  transition: top 0.2s ease-in-out; }
+  transition: top 0.2s ease-in-out;
+  z-index: 1; }
 
 .custom-toggler.navbar-toggler {
   border-color: #0048ff; }
@@ -42,8 +45,14 @@ a, a:hover {
   .container-fluid .h2p {
     padding-left: 15px; }
 
-svg {
-  z-index: 1; }
+.social1, .social2, .social3 {
+  padding: 14px 27px;
+  width: 93px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #0964c6; }
+  .social1:hover, .social2:hover, .social3:hover {
+    background-color: #75d1fc; }
 
 .contimg {
   margin: 0px;

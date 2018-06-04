@@ -1,0 +1,32 @@
+@media (min-width: 426px) and (max-width: 950px) {
+  html body {
+    background-color: #86ffd9; }
+    html body main .carousel:last-child {
+      display: inline-block; }
+
+  .contimg {
+    display: none; }
+
+  .well {
+    background: transparent; }
+    .well .carousel {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px; }
+      .well .carousel .carousel-indicators {
+        margin: 0 auto;
+        top: auto;
+        bottom: 0px; }
+        .well .carousel .carousel-indicators li {
+          background: #c0c0c0; }
+        .well .carousel .carousel-indicators .active {
+          background: #333333; }
+      .well .carousel .carousel-inner .thumbnail img {
+        width: 800px; }
+
+  .carousel-control {
+    left: -12px; }
+
+  .carousel-control.right {
+    right: -12px; } }
+
+/*# sourceMappingURL=tablet.css.map */
