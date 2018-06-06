@@ -1,7 +1,12 @@
 @media (max-width: 425px) {
     html{
         body{
-            background-color: bisque;
+            background-color: #EDF3F3;
+            margin: 0;
+            padding: 0;
+            main .container-fluid:last-child{
+                display: none;
+            } 
         }
     }
 
@@ -62,4 +67,5 @@
             }
         }
     }
+
 }

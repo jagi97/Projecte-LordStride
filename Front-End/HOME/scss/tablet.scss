@@ -1,8 +1,10 @@
 @media (min-width: 426px) and (max-width: 950px){
     html{
         body{
-            background-color: rgb(134, 255, 217);
-            main .carousel:last-child{
+            background-color: #EDF3F3;
+            margin: 0;
+            padding: 0;
+            main .container-fluid:last-child{
                 display: inline-block;
             } 
         }

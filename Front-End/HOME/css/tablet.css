@@ -1,7 +1,9 @@
 @media (min-width: 426px) and (max-width: 950px) {
   html body {
-    background-color: #86ffd9; }
-    html body main .carousel:last-child {
+    background-color: #EDF3F3;
+    margin: 0;
+    padding: 0; }
+    html body main .container-fluid:last-child {
       display: inline-block; }
 
   .contimg {

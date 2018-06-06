@@ -1,8 +1,11 @@
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('header').outerHeight();
+var navbarHeight = $('header').outerHeight();;
 
+$(window).resize(function(){
+    navbarHeight = $('header').outerHeight();
+})
 
 
 $(window).scroll(function(event){

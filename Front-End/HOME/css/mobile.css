@@ -1,6 +1,10 @@
 @media (max-width: 425px) {
   html body {
-    background-color: bisque; }
+    background-color: #EDF3F3;
+    margin: 0;
+    padding: 0; }
+    html body main .container-fluid:last-child {
+      display: none; }
 
   main .firstcontainer .row div {
     flex-direction: column;
