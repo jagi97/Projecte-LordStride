@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../multimedia/firewatch.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    a{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    h1{
+        position: relative;
+        top: -180px;
+    }
+    .container{
+        position: relative;
+        top: -140px;
+        .table{
+        text-align: center;
+    }
+    }
+    
+}
+
+@media (max-width: 840px) {
+   
+}
