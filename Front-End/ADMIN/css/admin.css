@@ -10,6 +10,13 @@ body {
 html, body {
   width: 100%;
   height: 100%; }
+  html .logout, body .logout {
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+    html .logout .btn, body .logout .btn {
+      border-radius: 50%;
+      padding: 0; }
   html div, body div {
     margin: 5%;
     position: relative;
