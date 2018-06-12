@@ -1,83 +1,75 @@
-var me = {};
-me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
+/* Meme */
 
-var you = {};
-you.avatar = "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg";
+var memes = [
+	'Dude, you smashed my turtle saying "I\'M MARIO BROS!"',
+	'Dude, you grabed seven oranges and yelled "I GOT THE DRAGON BALLS!"',
+	'Dude, you threw my hamster across the room and said "PIKACHU I CHOOSE YOU!"',
+	'Dude, you congratulated a potato for getting a part in Toy Story',
+	'Dude, you were hugging an old man with a beard screaming "DUMBLEDORE YOU\'RE ALIVE!"',
+	'Dude, you were cutting all my pinapples yelling "SPONGEBOB! I KNOW YOU\'RE THERE!"',
+];
 
-function formatAMPM(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? '0'+minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
-    return strTime;
-}            
+var random = document.querySelector('#random');
 
-//-- No use time. It is a javaScript effect.
-function insertChat(who, text, time){
-    if (time === undefined){
-        time = 0;
-    }
-    var control = "";
-    var date = formatAMPM(new Date());
-    
-    if (who == "me"){
-        control = '<li style="width:100%">' +
-                        '<div class="msj macro">' +
-                        '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ me.avatar +'" /></div>' +
-                            '<div class="text text-l">' +
-                                '<p>'+ text +'</p>' +
-                                '<p><small>'+date+'</small></p>' +
-                            '</div>' +
-                        '</div>' +
-                    '</li>';                    
-    }else{
-        control = '<li style="width:100%;">' +
-                        '<div class="msj-rta macro">' +
-                            '<div class="text text-r">' +
-                                '<p>'+text+'</p>' +
-                                '<p><small>'+date+'</small></p>' +
-                            '</div>' +
-                        '<div class="avatar" style="padding:0px 0px 0px 10px !important"><img class="img-circle" style="width:100%;" src="'+you.avatar+'" /></div>' +                                
-                  '</li>';
-    }
-    setTimeout(
-        function(){                        
-            $("ul").append(control).scrollTop($("ul").prop('scrollHeight'));
-        }, time);
-    
+random.innerHTML = memes[Math.floor(Math.random() * memes.length)];
+
+/* Time */
+
+var deviceTime = document.querySelector('.status-bar .time');
+var messageTime = document.querySelectorAll('.message .time');
+
+deviceTime.innerHTML = moment().format('h:mm');
+
+setInterval(function() {
+	deviceTime.innerHTML = moment().format('h:mm');
+}, 1000);
+
+for (var i = 0; i < messageTime.length; i++) {
+	messageTime[i].innerHTML = moment().format('h:mm A');
 }
 
-function resetChat(){
-    $("ul").empty();
+/* Message */
+
+var form = document.querySelector('.conversation-compose');
+var conversation = document.querySelector('.conversation-container');
+
+form.addEventListener('submit', newMessage);
+
+function newMessage(e) {
+	var input = e.target.input;
+
+	if (input.value) {
+		var message = buildMessage(input.value);
+		conversation.appendChild(message);
+		animateMessage(message);
+	}
+
+	input.value = '';
+	conversation.scrollTop = conversation.scrollHeight;
+
+	e.preventDefault();
 }
 
-$(".mytext").on("keydown", function(e){
-    if (e.which == 13){
-        var text = $(this).val();
-        if (text !== ""){
-            insertChat("me", text);              
-            $(this).val('');
-        }
-    }
-});
+function buildMessage(text) {
+	var element = document.createElement('div');
 
-$('body > div > div > div:nth-child(2) > span').click(function(){
-    $(".mytext").trigger({type: 'keydown', which: 13, keyCode: 13});
-})
+	element.classList.add('message', 'sent');
 
-//-- Clear Chat
-resetChat();
+	element.innerHTML = text +
+		'<span class="metadata">' +
+			'<span class="time">' + moment().format('h:mm A') + '</span>' +
+			'<span class="tick tick-animation">' +
+				'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck" x="2047" y="2061"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#92a58c"/></svg>' +
+				'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg>' +
+			'</span>' +
+		'</span>';
 
-//-- Print Messages
-insertChat("me", "Hello Tom...", 0);  
-insertChat("you", "Hi, Pablo", 1500);
-insertChat("me", "What would you like to talk about today?", 3500);
-insertChat("you", "Tell me a joke",7000);
-insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
-insertChat("you", "LOL", 12000);
+	return element;
+}
 
-
-//-- NOTE: No use time on insertChat.
+function animateMessage(message) {
+	setTimeout(function() {
+		var tick = message.querySelector('.tick');
+		tick.classList.remove('tick-animation');
+	}, 500);
+}

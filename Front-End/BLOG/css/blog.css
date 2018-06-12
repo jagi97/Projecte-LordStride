@@ -145,21 +145,26 @@ footer {
 
 .navbar-nav {
   float: right;
-  text-align: end; }
+  text-align: end;
+  width: 100px; }
   .navbar-nav .dropdown-menu {
+    padding-right: 20px;
+    text-align: end;
     opacity: 0.9;
-    width: 250px;
+    width: 185px;
     position: relative;
-    top: -50px;
-    left: 110px; }
+    top: -100px;
+    left: -185px; }
 
 @media (min-width: 992px) {
-  .navbar-nav .dropdown-menu {
-    opacity: 0.9;
-    width: 250px;
-    position: relative;
-    top: 47px;
-    left: -150px; } }
+  .navbar-nav {
+    width: auto; }
+    .navbar-nav .dropdown-menu {
+      opacity: 0.9;
+      width: 185px;
+      position: relative;
+      top: 47px;
+      left: -70px; } }
 .collapse {
   overflow: visible; }
 
