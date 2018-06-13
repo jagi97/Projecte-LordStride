@@ -15,28 +15,28 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg nav-down" id="nav">
-      <a class="navbar-brand" href="../HOME/lordstride.html">LORDSTRIDE</a>
+      <a class="navbar-brand" href="../HOME/lordstride.php">LORDSTRIDE</a>
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-          <a class="nav-link" href="../SERVICIOS/service.html">SERVICES</a>
+          <a class="nav-link" href="../SERVICIOS/service.php">SERVICES</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="../BLOG/blog.html">BLOG</a>
+          <a class="nav-link" href="../BLOG/blog.php">BLOG</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="contact.html">CONTACT</a>
+          <a class="nav-link" href="contact.php">CONTACT</a>
           </li>
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               ACCOUNT
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="nav-link" href="../SIGNIN/index.html">ENTRAR</a>
-              <a class="nav-link" href="../LOGIN/index.html">CREATE ACCOUNT</a>
+              <a class="nav-link" href="../SIGNIN/index.php">ENTRAR</a>
+              <a class="nav-link" href="../LOGIN/index.php">CREATE ACCOUNT</a>
           </div>
           </li>
         </ul>
@@ -89,28 +89,27 @@
         <div class="row footer">
           <div class="col">
             <ul>
-                <a href="../HOME/lordstride.html"><li>
+                <a href="../HOME/lordstride.php"><li>
                 <img src="multimedia/logo.png" alt="" class="logo">
                 LORDSTRIDE
               </li></a> 
-              <li>Slogan</li>
             </ul>
           </div>
           <div class="col">
             <ul>
-              <a href="../SIGNIN/index.html"><li>SIGN IN</li></a>
-              <a href="../LOGIN/index.html"><li>SIGN UP</li></a>
+              <a href="../SIGNIN/index.php"><li>SIGN IN</li></a>
+              <a href="../LOGIN/index.php"><li>SIGN UP</li></a>
             </ul>
           </div>
           <div class="col">
             <ul>
-              <a href="../SERVICIOS/service.html"><li>SERVICES</li></a>
-              <a href="../BLOG/blog.html"><li>BLOG</li></a>
+              <a href="../SERVICIOS/service.php"><li>SERVICES</li></a>
+              <a href="../BLOG/blog.php"><li>BLOG</li></a>
             </ul>
           </div>
           <div class="col">
             <ul>
-              <a href="contact.html"><li>CONTACT</li></a>
+              <a href="contact.php"><li>CONTACT</li></a>
             </ul>
           </div>
         </div>
@@ -129,7 +128,7 @@
           <p><i class="far fa-copyright"></i> Copyright. All rights reserved.</p>
         </div>
       </div>
-      <a class="admin" href="../ADMIN/log.html">ADMIN</a>
+      <a class="admin" href="../ADMIN/log.php">ADMIN</a>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

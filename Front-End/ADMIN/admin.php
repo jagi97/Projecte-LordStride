@@ -12,15 +12,15 @@
 
   </head>
   <body class="d-flex justify-content-center align-items-center">
-    <form class="logout" action="../HOME/lordstride.html"><button type="submit" class="btn btn-light"><i class="fas fa-arrow-alt-circle-right fa-4x"></i></button></form>
+    <form class="logout" action="../HOME/lordstride.php"><button type="submit" class="btn btn-light"><i class="fas fa-arrow-alt-circle-right fa-4x"></i></button></form>
     <div>
-        <form action="messages.html"><button type="submit" class="btn btn-info">MENSAJES</button></form>
+        <form action="messages.php"><button type="submit" class="btn btn-info">MENSAJES</button></form>
     </div>
     <div>
-        <form action="comments.html"><button type="submit" class="btn btn-info">COMENTARIOS</button></form>
+        <form action="comments.php"><button type="submit" class="btn btn-info">COMENTARIOS</button></form>
     </div>
     <div>
-        <form action="posting.html"><button type="submit" class="btn btn-info">AÑADIR POST</button></form>
+        <form action="posting.php"><button type="submit" class="btn btn-info">AÑADIR POST</button></form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

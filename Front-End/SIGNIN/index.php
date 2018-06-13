@@ -19,7 +19,7 @@
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="container-fluid">
 				<div class="row">
-					<a href="../HOME/lordstride.html">LORDSTRIDE</a>
+					<a href="../HOME/lordstride.php">LORDSTRIDE</a>
 				</div>
 			</div>
 			<div class="wrap-login100">
@@ -50,8 +50,8 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<form action="../USERS/index.html">
-							<button type="submit" class="login100-form-btn" onclick="window.location.href='../USERS/index.html'">
+						<form action="../USERS/index.php">
+							<button type="submit" class="login100-form-btn" onclick="window.location.href='../USERS/index.php'">
 								Login
 							</button>
 						</form>
@@ -59,7 +59,7 @@
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="../LOGIN/index.html">
+						<a class="txt1" href="../LOGIN/index.php">
 							New? Create account
 						</a>
 					</div>

@@ -23,13 +23,12 @@
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        
   </head>
   <body>
     <!-- Side Navbar -->
@@ -42,15 +41,15 @@
             <h2 class="h5">Anderson Hardy</h2>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
-          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>L</strong><strong class="text-primary">S</strong></a></div>
+          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>L</strong><strong class="text-primary">S</strong></a></div>
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.html"><i class="fas fa-home"></i>User's Info                             </a></li>
-            <li><a href="message.html"><i class="fas fa-comments"></i>Messages                             </a></li>
-            <li><a href="cart.html"> <i class="fas fa-shopping-cart"></i>Cart                             </a></li>
+            <li><a href="index.php"><i class="fas fa-home"></i>User's Info                             </a></li>
+            <li><a href="message.php"><i class="fas fa-comments"></i>Messages                             </a></li>
+            <li><a href="cart.php"> <i class="fas fa-shopping-cart"></i>Cart                             </a></li>
           </ul>
         </div>
       </div>
@@ -61,37 +60,43 @@
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fas fa-bars"></i></a><a href="index.html" class="navbar-brand">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fas fa-bars"></i></a><a href="index.php" class="navbar-brand">
                   <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">Lordstride</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
-                <li class="nav-item"><a href="../SIGNIN/index.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></a></li>
+                <li class="nav-item"><a href="../SIGNIN/index.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></a></li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
       <!-- Header Section-->
-      <!-- Breadcrumb-->
-      <div class="breadcrumb-holder">
-        <div class="container-fluid">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">User</a></li>
-            <li class="breadcrumb-item active">Cart       </li>
-          </ul>
-        </div>
-      </div>
       <section class="dashboard-header section-padding">
         <div class="container-fluid">
           <div class="row d-flex align-items-md-stretch">
-            <!-- Pie Chart-->
-            <div class="col-lg-3 col-md-6">
-              <div class="card project-progress">
-                <h2 class="display h4">Project Beta progress</h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <div class="pie-chart">
-                  <canvas id="pieChart" width="300" height="300"> </canvas>
-                </div>
+            
+            <!-- To Do List-->
+            <div class="col-lg-3  pt-3">
+              <div class="card to-do">
+                <h2 class="display h4">Info</h2>
+                <form>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Username:</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="basedatos">
+                    </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="basedatos">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" value="Password">
+                  </div>
+                  <button type="submit" class="btn btn-primary">MODIFICA</button>
+                  <button type="submit" class="btn btn-danger">ELIMINAR CUENTA</button>
+
+                </form>
               </div>
             </div>
           </div>

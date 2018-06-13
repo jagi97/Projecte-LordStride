@@ -13,7 +13,7 @@
 
   </head>
   <body class="d-flex justify-content-center align-items-center flex-column">
-    <a class="arrow"href="admin.html"><i class="fas fa-arrow-alt-circle-left fa-4x"></i></a>
+    <a class="arrow"href="admin.php"><i class="fas fa-arrow-alt-circle-left fa-4x"></i></a>
     <h1>MESSAGES</h1>
     <div class="container card rare-wind-gradient chat-room">
             <div class="card-body">

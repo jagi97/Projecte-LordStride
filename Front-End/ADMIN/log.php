@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/log.css">
 </head>
 <body>
-    <form action="admin.html">
+    <form action="admin.php">
         <div class="form-group">
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User">
         </div>

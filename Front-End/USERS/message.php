@@ -44,15 +44,15 @@
             <h2 class="h5">Anderson Hardy</h2>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
-          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>L</strong><strong class="text-primary">S</strong></a></div>
+          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>L</strong><strong class="text-primary">S</strong></a></div>
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
           <h5 class="sidenav-heading">Main</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="index.html"><i class="fas fa-home"></i>User's Info                             </a></li>
-            <li><a href="message.html"><i class="fas fa-comments"></i>Messages                             </a></li>
-            <li><a href="cart.html"> <i class="fas fa-shopping-cart"></i>Cart                             </a></li>
+            <li><a href="index.php"><i class="fas fa-home"></i>User's Info                             </a></li>
+            <li><a href="message.php"><i class="fas fa-comments"></i>Messages                             </a></li>
+            <li><a href="cart.php"> <i class="fas fa-shopping-cart"></i>Cart                             </a></li>
         </div>
       </div>
     </nav>
@@ -62,11 +62,11 @@
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fas fa-bars"></i></a><a href="index.html" class="navbar-brand">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="fas fa-bars"></i></a><a href="index.php" class="navbar-brand">
                   <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">Lordstride</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
-                <li class="nav-item"><a href="../SIGNIN/index.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></a></li>
+                <li class="nav-item"><a href="../SIGNIN/index.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></a></li>
               </ul>
             </div>
           </div>
@@ -77,7 +77,7 @@
       <div class="breadcrumb-holder">
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">User</a></li>
+            <li class="breadcrumb-item"><a href="index.php">User</a></li>
             <li class="breadcrumb-item active">Messages       </li>
           </ul>
         </div>

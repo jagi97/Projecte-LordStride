@@ -33,21 +33,21 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="../SERVICIOS/service.html">SERVICES</a>
+              <a class="nav-link" href="../SERVICIOS/service.php">SERVICES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../BLOG/blog.html">BLOG</a>
+              <a class="nav-link" href="../BLOG/blog.php">BLOG</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../CONTACTO/contact.html">CONTACT</a>
+              <a class="nav-link" href="../CONTACTO/contact.php">CONTACT</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 ACCOUNT
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="nav-link" href="../SIGNIN/index.html">ENTRAR</a>
-                <a class="nav-link" href="../LOGIN/index.html">CREATE ACCOUNT</a>
+                <a class="nav-link" href="../SIGNIN/index.php">ENTRAR</a>
+                <a class="nav-link" href="../LOGIN/index.php">CREATE ACCOUNT</a>
               </div>
             </li>
           </ul>
@@ -58,7 +58,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col">
-            <form action="../CONTACTO/contact.html">
+            <form action="../CONTACTO/contact.php">
             <button>
               <p>Cúal es tu proyecto?</p>
             </button>
@@ -180,19 +180,19 @@
           </div>
           <div class="col">
             <ul>
-              <a href="../SIGNIN/index.html"><li>SIGN IN</li></a>
-              <a href="../LOGIN/index.html"><li>SIGN UP</li></a>
+              <a href="../SIGNIN/index.php"><li>SIGN IN</li></a>
+              <a href="../LOGIN/index.php"><li>SIGN UP</li></a>
             </ul>
           </div>
           <div class="col">
             <ul>
-              <a href="../SERVICIOS/service.html"><li>SERVICES</li></a>
-              <a href="../BLOG/blog.html"><li>BLOG</li></a>
+              <a href="../SERVICIOS/service.php"><li>SERVICES</li></a>
+              <a href="../BLOG/blog.php"><li>BLOG</li></a>
             </ul>
           </div>
           <div class="col">
             <ul>
-              <a href="../CONTACTO/contact.html"><li>CONTACT</li></a>
+              <a href="../CONTACTO/contact.php"><li>CONTACT</li></a>
             </ul>
           </div>
         </div>
