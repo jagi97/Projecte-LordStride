@@ -1,6 +1,7 @@
 <?php
 
-require_once "../Data/dataUser.php";
+//  require "../Data/dataUser.php";
+require "/Applications/MAMP/htdocs/LordStride/Data/dataUser.php";
 
 class User {
 

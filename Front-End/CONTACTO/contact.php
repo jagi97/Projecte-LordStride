@@ -56,7 +56,7 @@
                   <p>Horario: 8:00 - 21:00</p>
                 </section>
                 <section>
-                  <h2>HOW CAN WE HELP?</h2>
+                  <h2>EXPLÍCANOS TU PROYECTO/CUESTIÓN</h2>
                   <form>
                       
                       <div class="form-group">

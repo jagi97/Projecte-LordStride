@@ -1,6 +1,6 @@
 <?php
 
-require_once 'conexion.php';
+require 'conexion.php';
 
 class dataUser {
 

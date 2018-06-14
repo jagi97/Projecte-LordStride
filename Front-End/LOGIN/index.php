@@ -1,3 +1,10 @@
+<?php
+
+   require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
+//    require "/Applications/MAMP/htdocs/LordStride/Data/dataUser.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +51,8 @@
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post">
+				
 					<span class="login100-form-title p-b-59">
 						Sign Up
 					</span>
@@ -98,7 +106,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button class="login100-form-btn" name="btnsignup">
 								Sign Up
 							</button>
 						</div>
@@ -127,3 +135,16 @@
 
 </body>
 </html>
+
+<?php
+	$username = $_POST['username'];
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$password = $_POST['pass'];
+
+	if(isset($_POST["btnsignup"])){
+		// $newUser = new User();
+		// $arrayPais = $newUser->insertUser($username, $name, $email, $password);
+	}
+	
+?>

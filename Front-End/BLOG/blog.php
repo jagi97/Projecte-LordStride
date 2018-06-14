@@ -75,7 +75,7 @@
         
                         <ul class="post-footer">
                           <li><a href="#"><i class="fas fa-heart"></i></i>57</a></li>
-                          <li><a href="#"><i class="fas fa-comment"></i></i>6</a></li>
+                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i>6</a></li>
                           <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
                         </ul>
                       </div><!-- blog-info -->
@@ -99,8 +99,8 @@
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
         
                         <ul class="post-footer">
-                          <li><a href="#"><i class="fas fa-heart"></i></i>57</a></li>
-                          <li><a href="#"><i class="fas fa-comment"></i></i>6</a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i>57</a></li>
+                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i>6</a></li>
                           <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
                         </ul>
                       </div><!-- blog-info -->
@@ -126,8 +126,8 @@
         
                       <ul class="post-footer">
                         <li><a href="#"><i class="fas fa-heart"></i></i>57</a></li>
-                          <li><a href="#"><i class="fas fa-comment"></i></i>6</a></li>
-                          <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
+                        <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i>6</a></li>
+                        <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
                       </ul>
         
                     </div><!-- single-post -->
@@ -137,7 +137,64 @@
               </div><!-- row -->
             </div><!-- container -->
           </section><!-- section -->
-      
+    
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <ul class="comment-section">
+            <li class="comment user-comment">
+                <div class="info">
+                    <a href="#">Anie Silverston</a>
+                    <span>4 hours ago</span>
+                </div>
+                <a class="avatar" href="#">
+                    <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
+                </a>
+                <p>Suspendisse gravida sem?</p>
+            </li>
+            <li class="comment author-comment">
+                <div class="info">
+                    <a href="#">Jack Smith</a>
+                    <span>3 hours ago</span>
+                </div>
+                <a class="avatar" href="#">
+                    <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor.</p>
+            </li>
+            <li class="comment user-comment">
+                <div class="info">
+                    <a href="#">Bradley Jones</a>
+                    <span>1 hour ago</span>
+                </div>
+                <a class="avatar" href="#">
+                    <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
+                </a>
+                <p>Suspendisse gravida sem sit amet molestie portitor?</p>
+            </li>
+            <li class="comment author-comment">
+                <div class="info">
+                    <a href="#">Jack Smith</a>
+                    <span>1 hour ago</span>
+                </div>
+                <a class="avatar" href="#">
+                    <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor.</p>
+            </li>
+            <li class="write-new">
+                <form action="#" method="post">
+                    <textarea placeholder="Write your comment here" name="comment"></textarea>
+                    <div>
+                        <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>  
     </main>
     <footer>
         <div class="container-fluid">
