@@ -1,3 +1,16 @@
+<?php
+   require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
+   require "/Applications/MAMP/htdocs/LordStride/Front-End/redirect.php";
+   session_start();
+
+  $User = new User();
+  $mostrarUser = $User->viewUser($_SESSION['username']);
+
+  $usernameUser = $mostrarUser->getUsername();
+  $emailUser = $mostrarUser->getEmail();
+  $passwordUser = $mostrarUser->getPassword();
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -64,7 +77,11 @@
                   <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">Lordstride</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
-                <li class="nav-item"><a href="../SIGNIN/index.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></a></li>
+                <li class="nav-item">
+                  <form method="post">
+                    <button name="btnlogout" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></button>
+                  </form>
+                </li>
               </ul>
             </div>
           </div>
@@ -79,22 +96,25 @@
             <div class="col-lg-3  pt-3">
               <div class="card to-do">
                 <h2 class="display h4">Info</h2>
-                <form>
+                <form method="post">
                   <div class="form-group">
-                      <label for="exampleInputEmail1">Username:</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="basedatos">
+                      <label for="exampleUser">Username:</label>
+                      <input type="text" class="form-control" id="exampleUser" aria-describedby="emailHelp" value="<?php echo $usernameUser ?>" name="username">
+                      
                     </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="basedatos">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $emailUser ?>" name="email">
+                    
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" value="Password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" value="<?php echo $passwordUser ?>" name="pass">
+                    
                   </div>
-                  <button type="submit" class="btn btn-primary">MODIFICA</button>
-                  <button type="submit" class="btn btn-danger">ELIMINAR CUENTA</button>
+                  <button type="submit" class="btn btn-primary" name="modify">MODIFICA</button>
+                  <button type="submit" class="btn btn-danger" name="delete">ELIMINAR CUENTA</button>
 
                 </form>
               </div>
@@ -117,3 +137,40 @@
     <script src="js/front.js"></script>
   </body>
 </html>
+
+<?php
+  $username = $_POST["username"];
+  $email = $_POST["email"];
+  $password = $_POST["pass"];
+
+  $usuario = $User->viewUser($username);
+
+  $idUser = $usuario->getId();
+
+	if(isset($_POST["modify"])& isset($_POST["username"]) & isset($_POST["email"]) & isset($_POST["pass"])){
+		$modificado = $User->modifyUser($id, $username, $name, $email, $password);
+
+		if($modificado){
+			echo "Modificado ";
+		
+		}
+		else{
+			echo "no modificado";
+		}
+  }
+  
+  if(isset($_POST["delete"])){	
+		$deleteado = $User->deleteUser($username);
+		if($deleteado){
+			echo "Eliminado ";
+
+		}
+		else{
+			echo "no eliminado ";
+		}
+  }
+
+  if(isset($_POST["btnlogout"])){	
+		redirect("../SIGNIN/index.php");
+  }
+?>

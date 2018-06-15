@@ -1,8 +1,7 @@
 <?php
-
    require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
-//    require "/Applications/MAMP/htdocs/LordStride/Data/dataUser.php";
-
+   require "/Applications/MAMP/htdocs/LordStride/Front-End/redirect.php";
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +50,7 @@
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" method="post">
+				<form class="login100-form validate-form" method="post" >
 				
 					<span class="login100-form-title p-b-59">
 						Sign Up
@@ -81,15 +80,9 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
-						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
-						<span class="focus-input100"></span>
-					</div>
-
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="checkbox">
 							<label class="label-checkbox100" for="ckb1">
 								<span class="txt1">
 									I agree to the
@@ -137,14 +130,25 @@
 </html>
 
 <?php
-	$username = $_POST['username'];
+	$_SESSION['username'] = $_POST['username'];
+	$_SESSION['password'] = $_POST['pass'];
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-	$password = $_POST['pass'];
 
-	if(isset($_POST["btnsignup"])){
-		// $newUser = new User();
-		// $arrayPais = $newUser->insertUser($username, $name, $email, $password);
+	if(isset($_POST["btnsignup"]) & isset($_POST["checkbox"]) & isset($_POST["username"]) & isset($_POST["name"]) & isset($_POST["email"]) & isset($_POST["pass"])){
+		
+		$newUser = new User(null,$_SESSION['username'], $name, $email, $_SESSION['password']);
+		
+		$usuarioExist = $newUser->viewUser($_SESSION['username']);
+
+		if(!$usuarioExist){
+			$arrayPais = $newUser->insertUser();
+			if($arrayPais){
+				redirect("../USERS/index.php");
+			}
+		}
+		else{
+			echo "EL USUARIO EXISTE YA, ";
+		}
 	}
-	
 ?>

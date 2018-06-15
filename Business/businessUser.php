@@ -61,7 +61,7 @@ class User {
 
     public function insertUser() {
     	$objDataUser = new dataUser();
-        $resultado = $objDataUser->insertUser($this->id, $this->username, $this->name, $this->email, $this->password);
+        $resultado = $objDataUser->insertUser($this->username, $this->name, $this->email, $this->password);
 	    return $resultado;
     }
     
@@ -75,8 +75,21 @@ class User {
     public function viewUser($username) {
         $objDataUser = new dataUser();
         $resultado = $objDataUser->viewUser($username);
+        if($resultado){
+            return new self($resultado['id'],$resultado['username'],$resultado['name'],$resultado['email'],$resultado['password']);
+        }
+        else{
+            return $false;
+        }
+    }
+
+    public function signinUser($username, $password) {
+        $objDataUser = new dataUser();
+        $resultado = $objDataUser->signinUser($username, $password);
+
         return $resultado;
     }
+
     public function modifyUser($id, $username, $name, $email, $password) {
         $objDataUser = new dataUser();
         $resultado = $objDataUser->modifyUser($this->id, $this->username, $this->name, $this->email, $this->password);

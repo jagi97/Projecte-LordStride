@@ -8,7 +8,7 @@ class dataUser {
 
 	public function insertUser($username, $name, $email, $password) {
     	$conexion = new conexion();
-        $consulta = $conexion->prepare('INSERT INTO ' . self::TABLA5 . ' (username, name, email, password) VALUES (:username, :name, :email, :password)');
+        $consulta = $conexion->prepare('INSERT INTO ' . self::TABLA5 . ' (id, username, name, email, password) VALUES (null, :username, :name, :email, :password)');
 		
         $consulta->bindParam(':username', $username);
         $consulta->bindParam(':name', $name);
@@ -41,6 +41,21 @@ class dataUser {
         $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA5 .' WHERE username = :username');
         
         $consulta->bindParam(':username', $username);
+
+        $consulta->execute();
+        $registro = $consulta->fetch();
+        $conexion = null;
+
+        return $registro;
+    }
+
+    public function signinUser($username, $password) {
+
+        $conexion = new conexion();
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA5 .' WHERE username = :username AND password = :password');
+        
+        $consulta->bindParam(':username', $username);
+        $consulta->bindParam(':password', $password);
 
         $consulta->execute();
         $registro = $consulta->fetch();

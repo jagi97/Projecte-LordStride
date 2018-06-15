@@ -1,3 +1,7 @@
+<?php
+   require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +27,7 @@
 				</div>
 			</div>
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post">
 					<span class="login100-form-logo">
 						<img src="../HOME/multimedia/logo.png" alt="" class="logo">
 					</span>
@@ -42,20 +46,12 @@
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>
-
 					<div class="container-login100-form-btn">
-						<form action="../USERS/index.php">
-							<button type="submit" class="login100-form-btn" onclick="window.location.href='../USERS/index.php'">
+						<!-- <form action="../USERS/index.php"> -->
+						<!-- onclick="window.location.href='../USERS/index.php'" -->
+							<button type="submit" class="login100-form-btn" name="btnsignin">
 								Login
 							</button>
-						</form>
-						
 					</div>
 
 					<div class="text-center p-t-90">
@@ -80,3 +76,23 @@
 
 </body>
 </html>
+
+<?php
+	$_SESSION['username'] = $_POST['username'];
+	$_SESSION['password'] = $_POST['pass'];
+
+	if(isset($_POST["btnsignin"])& isset($_POST["username"]) & isset($_POST["pass"])){
+		
+		$User = new User();
+		
+		$usuarioExist = $User->signinUser($_SESSION['username'], $_SESSION['password']);
+
+		if($usuarioExist){
+			echo "DENTRO ";
+			header("Location: ../USERS/index.php");
+		}
+		else{
+			echo "USERNAME/PASSWORD MAL INTRODUCIDOS ";
+		}
+	}
+?>

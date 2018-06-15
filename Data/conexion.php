@@ -4,7 +4,7 @@ class conexion extends PDO {
     private const DB_HOST="localhost";
     private const DB_NAME="lordstride";
     private const DB_USER="root";
-    private const DB_PASS="";
+    private const DB_PASS="root";
 
     public function __construct() {
         //Sobreescribo el método constructor de la clase PDO.
