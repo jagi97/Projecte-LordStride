@@ -1,6 +1,6 @@
 <?php
 
-require_once 'conexion.php';
+require 'conexion.php';
 
 class dataPost {
 
@@ -28,6 +28,20 @@ class dataPost {
 		$conexion = null;
 
         return $resultado;
+    }
+
+    public function viewPost($numPost) {
+
+        $conexion = new conexion();
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA4 .' WHERE numPost = :numPost');
+        
+        $consulta->bindParam(':numPost', $numPost);
+
+        $consulta->execute();
+        $registro = $consulta->fetch();
+        $conexion = null;
+
+        return $registro;
     }
 }
 

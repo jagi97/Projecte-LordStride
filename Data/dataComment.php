@@ -35,6 +35,19 @@ class dataComment {
         return $registro;
     }
 
+    public function numComments($numPost) {
+
+    	$conexion = new conexion();
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA1 .' WHERE numPost = :numPost' );
+
+        $consulta->bindParam(':numPost', $numPost);
+        $consulta->execute();
+        $registro = $consulta->rowCount();
+        $conexion = null;
+
+        return $registro;
+    }
+
 }
 
 ?>

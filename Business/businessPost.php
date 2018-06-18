@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Data/dataPost.php";
+require "/Applications/MAMP/htdocs/LordStride/Data/dataPost.php";
 
 class Post {
 
@@ -49,6 +49,17 @@ class Post {
         $objDataPost = new dataPost();
         $resultado = $objDataPost->increaseLike($numPost);
         return $resultado;
+    }
+
+    public function viewPost($numPost) {
+        $objDataPost = new dataPost();
+        $resultado = $objDataPost->viewPost($numPost);
+        if($resultado){
+            return new self($resultado['numPost'],$resultado['likes'],$resultado['viewed']);
+        }
+        else{
+            return $false;
+        }
     }
 }
 

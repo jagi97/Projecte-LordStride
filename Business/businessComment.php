@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Data/dataComment.php";
+require_once "/Applications/MAMP/htdocs/LordStride/Data/dataComment.php";
 
 class Comment {
 
@@ -67,6 +67,12 @@ class Comment {
     public function viewComments($numPost) {
         $objDataComment = new dataComment();
         $resultado = $objDataComment->viewComments($numPost);
+        return $resultado;
+    }
+
+    public function numComments($numPost) {
+        $objDataComment = new dataComment();
+        $resultado = $objDataComment->numComments($numPost);
         return $resultado;
     }
 }

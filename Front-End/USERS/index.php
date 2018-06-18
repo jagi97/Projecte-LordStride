@@ -7,6 +7,7 @@
   $mostrarUser = $User->viewUser($_SESSION['username']);
 
   $usernameUser = $mostrarUser->getUsername();
+  $nameUser = $mostrarUser->getName();
   $emailUser = $mostrarUser->getEmail();
   $passwordUser = $mostrarUser->getPassword();
 
@@ -78,9 +79,7 @@
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
                 <li class="nav-item">
-                  <form method="post">
-                    <button name="btnlogout" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></button>
-                  </form>
+                    <a href="logout.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fas fa-sign-out-alt"></i></a>
                 </li>
               </ul>
             </div>
@@ -101,7 +100,12 @@
                       <label for="exampleUser">Username:</label>
                       <input type="text" class="form-control" id="exampleUser" aria-describedby="emailHelp" value="<?php echo $usernameUser ?>" name="username">
                       
-                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="exampleName">Name:</label>
+                      <input type="text" class="form-control" id="exampleName" aria-describedby="emailHelp" value="<?php echo $nameUser ?>" name="name">
+                      
+                  </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email address:</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $emailUser ?>" name="email">
@@ -139,16 +143,21 @@
 </html>
 
 <?php
+  if(isset($_POST["btnlogout"])){
+		header("Location: ../SIGNIN/index.php");
+  }
+
   $username = $_POST["username"];
   $email = $_POST["email"];
   $password = $_POST["pass"];
+  $name = $_POST["name"];
 
-  $usuario = $User->viewUser($username);
+  $idUser = $mostrarUser->getId();
 
-  $idUser = $usuario->getId();
-
-	if(isset($_POST["modify"])& isset($_POST["username"]) & isset($_POST["email"]) & isset($_POST["pass"])){
-		$modificado = $User->modifyUser($id, $username, $name, $email, $password);
+	if(isset($_POST["modify"])& isset($_POST["username"]) & isset($_POST["email"]) & isset($_POST["pass"])& isset($_POST["name"])){
+    //$User->setId($idUser);
+    $User=new User($idUser, $username, $name, $email, $password);
+		$modificado = $User->modifyUser();
 
 		if($modificado){
 			echo "Modificado ";
@@ -159,10 +168,14 @@
 		}
   }
   
-  if(isset($_POST["delete"])){	
-		$deleteado = $User->deleteUser($username);
+  if(isset($_POST["delete"])){
+
+    $User=new User($idUser, $username, $name, $email, $password);
+    $deleteado = $User->deleteUser();
+    
 		if($deleteado){
-			echo "Eliminado ";
+      echo "Eliminado ";
+      redirect("../LOGIN/index.php");
 
 		}
 		else{
@@ -170,7 +183,5 @@
 		}
   }
 
-  if(isset($_POST["btnlogout"])){	
-		redirect("../SIGNIN/index.php");
-  }
+  
 ?>

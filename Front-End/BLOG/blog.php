@@ -1,18 +1,43 @@
-<!doctype html>
+<?php
+   require "/Applications/MAMP/htdocs/LordStride/Business/businessPost.php";
+   require "/Applications/MAMP/htdocs/LordStride/Business/businessComment.php";
+
+
+  $posts = new Post();
+  $mostrarPost1 = $posts->viewPost(1);
+  $mostrarPost2 = $posts->viewPost(2);
+  $mostrarPost3 = $posts->viewPost(3);
+
+  $likes1 = $mostrarPost1->getLikes();
+  $viewed1 = $mostrarPost1->getViewed();
+
+  $likes2 = $mostrarPost2->getLikes();
+  $viewed2 = $mostrarPost2->getViewed();
+
+  $likes3 = $mostrarPost3->getLikes();
+  $viewed4 = $mostrarPost3->getViewed();
+
+  $comments = new Comment();
+  $comments1 = $comments->numComments(1);
+  $comments2 = $comments->numComments(2);
+  $comments3 = $comments->numComments(3);
+
+?>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/blog.css">
-    
-   <title>LORDSTRIDE</title>
-   <link rel="icon" href="../HOME/multimedia/logo.png">
-   
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/blog.css">
+  
+  <title>LORDSTRIDE</title>
+  <link rel="icon" href="../HOME/multimedia/logo.png">
+  
+</head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg nav-down" id="nav">
@@ -74,9 +99,9 @@
                           ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
         
                         <ul class="post-footer">
-                          <li><a href="#"><i class="fas fa-heart"></i></i>57</a></li>
-                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i>6</a></li>
-                          <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes1 ?></a></li>
+                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments1 ?></a></li>
+                          <li><a href="#"><i class="fas fa-eye"></i><?php echo $viewed1 ?></a></li>
                         </ul>
                       </div><!-- blog-info -->
                     </div><!-- single-post -->
@@ -99,9 +124,9 @@
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
         
                         <ul class="post-footer">
-                          <li><a href="#"><i class="fas fa-heart"></i>57</a></li>
-                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i>6</a></li>
-                          <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
+                          <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes2 ?></a></li>
+                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments2 ?></a></li>
+                          <li><a href="#"><i class="fas fa-eye"></i><?php echo $likes2 ?></a></li>
                         </ul>
                       </div><!-- blog-info -->
         
@@ -125,9 +150,9 @@
                           ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
         
                       <ul class="post-footer">
-                        <li><a href="#"><i class="fas fa-heart"></i></i>57</a></li>
-                        <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i>6</a></li>
-                        <li><a href="#"><i class="fas fa-eye"></i>138</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes3 ?></a></li>
+                        <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments3 ?></a></li>
+                        <li><a href="#"><i class="fas fa-eye"></i><?php echo $likes3 ?></a></li>
                       </ul>
         
                     </div><!-- single-post -->

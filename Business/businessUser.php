@@ -90,13 +90,13 @@ class User {
         return $resultado;
     }
 
-    public function modifyUser($id, $username, $name, $email, $password) {
+    public function modifyUser() {
         $objDataUser = new dataUser();
         $resultado = $objDataUser->modifyUser($this->id, $this->username, $this->name, $this->email, $this->password);
 	    return $resultado;
     }
 
-    public function deleteUser($username){
+    public function deleteUser(){
         $objDataUser = new dataUser();
         $resultado = $objDataUser->deleteUser($this->username);
 	    return $resultado;
