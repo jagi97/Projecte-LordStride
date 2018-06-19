@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,7 +15,7 @@
 
   </head>
   <body class="d-flex justify-content-center align-items-center">
-    <form class="logout" action="../HOME/lordstride.php"><button type="submit" class="btn btn-light"><i class="fas fa-arrow-alt-circle-right fa-4x"></i></button></form>
+    <form class="logout" action="logout.php"><button type="submit" class="btn btn-light"><i class="fas fa-arrow-alt-circle-right fa-4x"></i></button></form>
     <div>
         <form action="messages.php"><button type="submit" class="btn btn-info">MENSAJES</button></form>
     </div>

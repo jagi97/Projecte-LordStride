@@ -4,5 +4,5 @@
     session_start();
     session_destroy();
 
-    redirect("../SIGNIN/index.php");
+    redirect("../CONTACTO/contact.php");
 ?>

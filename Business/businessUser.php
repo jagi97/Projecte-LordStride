@@ -69,7 +69,17 @@ class User {
 
         $objDataUser = new dataUser();
         $resultado = $objDataUser->viewAllusers();
-        return $resultado;
+        if(!$resultado){
+            return false;
+        }
+        else{
+            $arayPersonas = array();
+            foreach($resultado as $persona){
+                $objPersona = new User($persona["id"],$persona["username"],$persona["name"],$persona["email"],$persona["password"]);
+                $arayPersonas[] = $objPersona;
+            }
+        }
+        return $arayPersonas;
     }
 
     public function viewUser($username) {

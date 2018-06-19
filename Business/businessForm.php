@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Data/dataForm.php";
+require "/Applications/MAMP/htdocs/LordStride/Data/dataForm.php";
 
 class Form {
 
@@ -68,7 +68,7 @@ class Form {
         $this->phone = $phone;
     }
 
-    public function insertFormulario($texto, $firstName, $lastName, $email, $phone) {
+    public function insertFormulario() {
     	$objDataForm = new dataForm();
         $resultado = $objDataForm->insertFormulario($this->texto, $this->firstName, $this->lastName, $this->email, $this->phone);
 	    return $resultado;

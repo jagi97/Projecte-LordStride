@@ -1,6 +1,6 @@
 <?php
 
-require 'conexion.php';
+require_once 'conexion.php';
 
 class dataUser {
 
@@ -26,7 +26,7 @@ class dataUser {
     public function viewAllusers() {
         
         $conexion = new conexion();
-        $consulta = $conexion->prepare('SELECT id , username FROM ' . self::TABLA5);
+        $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA5);
 
         $consulta->execute();
         $registro = $consulta->fetchAll();

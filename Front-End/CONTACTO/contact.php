@@ -1,3 +1,8 @@
+<?php
+
+require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,35 +53,34 @@
             <div class="row">
               <div class="col">
                 <section>
-                  <h2>WHERE WE'RE AT.</h2>
-                  <h3>BARCELONA</h3>
+                  <h2>¿DÓNDE ESTAMOS?</h2>
+                  <h4>BARCELONA</h4>
                   <p>Passeig de Sant Joan Bosco, 42, 08017 Barcelona</p>
                   <p>Email: salesianssarria.com</p>
                   <p>Telf: 932 03 11 00</p>
                   <p>Horario: 8:00 - 21:00</p>
                 </section>
                 <section>
-                  <h2>EXPLÍCANOS TU PROYECTO/CUESTIÓN</h2>
-                  <form>
-                      
+                  <h2>EXPLÍCANOS TU PROYECTO</h2>
+                  <form method="post">
                       <div class="form-group">
-                        <input type="text" class="form-control" id="inputAddress" placeholder="First Name">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Nombre" name="firstName">
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Last Name">
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apellido" name="lastName">
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
                         </div>
                         <div class="form-group col-md-6">
-                          <input type="password" class="form-control" id="inputPassword4" placeholder="Phone">
+                          <input type="password" class="form-control" id="inputPassword4" placeholder="Telf" name="phone">
                         </div>
                       </div>
                       <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="What's this all about?"></textarea>
+                        <input class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="¿Qué tipo de página quieres? ¿Qué te interesa? ¿Precio?"  name="texto"></input>
                       </div>
-                      <button type="submit" class="btn btn-primary">SEND</button>
+                      <button type="submit" class="btn btn-primary" name="send">SEND</button>
                     </form>
                 </section>
               </div>
@@ -140,3 +144,18 @@
       async defer></script>
 </body>
 </html>
+<?php
+
+	if(isset($_POST["send"]) & isset($_POST["texto"]) & isset($_POST["firstName"]) & isset($_POST["lastName"]) & isset($_POST["email"]) & isset($_POST["phone"])){
+
+    $texto = $_POST["texto"];
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+
+    $newFormulario = new Form(null,$texto,  $firstName, $lastName,  $email, $phone);
+    $enviaBD = $newFormulario->insertFormulario();
+  }
+  
+?>

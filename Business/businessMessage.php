@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Data/dataMessage.php";
+require_once "/Applications/MAMP/htdocs/LordStride/Data/dataMessage.php";
 
 class Message {
 
@@ -9,15 +9,15 @@ class Message {
     private $texto;
     private $hora;
 
-    public function __construct ( $numPost=null, $idUsuario=null,  $texto=null, $hora=null) {
-        $this->numPost = $numPost;
+    public function __construct ( $numMensaje=null, $idUsuario=null,  $texto=null, $hora=null) {
+        $this->numMensaje = $numMensaje;
         $this->idUsuario = $idUsuario;
         $this->texto = $texto;        
         $this->hora = $hora;
     }
 
-    public function getNumPost() {
-        return $this->numPost;
+    public function getNumMensaje() {
+        return $this->numMensaje;
     }
 
     public function getIdUsuario() {
@@ -32,8 +32,8 @@ class Message {
         return $this->hora;
     }
 
-    public function setNumPost($numPost) {
-        $this->numPost = $numPost;
+    public function setNumMensaje($numMensaje) {
+        $this->numPost = $numMensaje;
     }
 
     public function setIdUsuario($idUsuario) {
@@ -48,7 +48,7 @@ class Message {
         $this->hora = $hora;
     }
 
-    public function insertMessage( $idUsuario, $texto) {
+    public function insertMessage() {
     	$objDataMessage = new dataComment();
         $resultado = $objDataMessage->insertMessage($this->idUsuario, $this->texto);
 	    return $resultado;

@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/modal.css">
   
   <title>LORDSTRIDE</title>
   <link rel="icon" href="../HOME/multimedia/logo.png">
@@ -88,7 +89,7 @@
         
                       <div class="blog-image"><img src="multimedia/blog-1-1000x600.jpg" alt="Blog Image"></div>
         
-                      <div class="avatar"><img src="multimedia/icons8-team-355979.jpg" alt="Profile Image"></div>
+                      <div class="avatar"><img src="multimedia/jagi.jpg" alt="Profile Image"></div>
         
                       <div class="blog-info">
         
@@ -114,7 +115,7 @@
         
                       <div class="blog-image"><img src="multimedia/audrey-jackson-260657.jpg" alt="Blog Image"></div>
         
-                      <div class="avatar"><img src="multimedia/icons8-team-355979.jpg" alt="Profile Image"></div>
+                      <div class="avatar"><img src="multimedia/jagi.jpg" alt="Profile Image"></div>
         
                       <div class="blog-info">
                         <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
@@ -141,7 +142,7 @@
         
                       <div class="blog-image"><img src="multimedia/pexels-photo-370474.jpeg" alt="Blog Image"></div>
         
-                      <div class="avatar"><img src="multimedia/icons8-team-355979.jpg" alt="Profile Image"></div>
+                      <div class="avatar"><img src="multimedia/jagi.jpg" alt="Profile Image"></div>
         
                       <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
                         Concepts in Physics?</b></a></h4>
@@ -166,57 +167,84 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <ul class="comment-section">
-            <li class="comment user-comment">
-                <div class="info">
-                    <a href="#">Anie Silverston</a>
-                    <span>4 hours ago</span>
-                </div>
-                <a class="avatar" href="#">
-                    <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
-                </a>
-                <p>Suspendisse gravida sem?</p>
-            </li>
-            <li class="comment author-comment">
-                <div class="info">
-                    <a href="#">Jack Smith</a>
-                    <span>3 hours ago</span>
-                </div>
-                <a class="avatar" href="#">
-                    <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor.</p>
-            </li>
-            <li class="comment user-comment">
-                <div class="info">
-                    <a href="#">Bradley Jones</a>
-                    <span>1 hour ago</span>
-                </div>
-                <a class="avatar" href="#">
-                    <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
-                </a>
-                <p>Suspendisse gravida sem sit amet molestie portitor?</p>
-            </li>
-            <li class="comment author-comment">
-                <div class="info">
-                    <a href="#">Jack Smith</a>
-                    <span>1 hour ago</span>
-                </div>
-                <a class="avatar" href="#">
-                    <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor.</p>
-            </li>
-            <li class="write-new">
-                <form action="#" method="post">
-                    <textarea placeholder="Write your comment here" name="comment"></textarea>
-                    <div>
-                        <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </li>
-        </ul>
+      <ul class="comment-section">
+
+    <li class="comment user-comment">
+
+              <div class="info">
+                  <a href="#">Anie Silverston</a>
+                  <span>4 hours ago</span>
+              </div>
+
+              <a class="avatar" href="#">
+                  <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
+              </a>
+
+              <p>Suspendisse gravida sem?</p>
+
+    </li>
+
+    <li class="comment author-comment">
+
+              <div class="info">
+                  <a href="#">Jack Smith</a>
+                  <span>3 hours ago</span>
+              </div>
+
+              <a class="avatar" href="#">
+                  <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+              </a>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor.</p>
+
+    </li>
+
+    <li class="comment user-comment">
+
+              <div class="info">
+                  <a href="#">Bradley Jones</a>
+                  <span>1 hour ago</span>
+              </div>
+
+              <a class="avatar" href="#">
+                  <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
+              </a>
+
+              <p>Suspendisse gravida sem sit amet molestie portitor?</p>
+
+    </li>
+
+          <li class="comment author-comment">
+
+              <div class="info">
+                  <a href="#">Jack Smith</a>
+                  <span>1 hour ago</span>
+              </div>
+
+              <a class="avatar" href="#">
+                  <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+              </a>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor.</p>
+
+          </li>
+
+          <li class="write-new">
+
+              <form action="#" method="post">
+
+                  <textarea placeholder="Write your comment here" name="comment"></textarea>
+
+                  <div>
+                      <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
+                      <button type="submit">Submit</button>
+                  </div>
+
+              </form>
+
+          </li>
+
+    </ul>
     </div>
   </div>
 </div>  
@@ -273,5 +301,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
   </body>
 </html>

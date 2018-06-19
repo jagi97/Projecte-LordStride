@@ -1,6 +1,6 @@
 <?php
 
-require_once 'conexion.php';
+require 'conexion.php';
 
 class dataForm {
 
@@ -9,7 +9,7 @@ class dataForm {
     public function insertFormulario($texto, $firstName, $lastName, $email, $phone) {
     	$conexion = new conexion();
         
-        $consulta = $conexion->prepare('INSERT INTO ' . self::TABLA2 . ' (texto, firstName, lastName, email, phone) VALUES ( :texto, :firstName, :lastName, :email, :phone)');
+        $consulta = $conexion->prepare('INSERT INTO ' . self::TABLA2 . ' (numForm, texto, firstName, lastName, email, phone) VALUES (null, :texto, :firstName, :lastName, :email, :phone)');
 		
 		$consulta->bindParam(':texto', $texto);
         $consulta->bindParam(':firstName', $firstName);

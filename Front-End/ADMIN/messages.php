@@ -1,3 +1,12 @@
+<?php
+    require_once "/Applications/MAMP/htdocs/LordStride/Business/businessMessage.php";
+    require_once "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
+
+    session_start();
+
+    $users = new User();
+    $allUsers = $users->viewAllusers();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,128 +31,22 @@
                 <div class="row px-lg-2 px-2">
         
                     <!-- Grid column -->
-                    <div class="col-md-6 col-xl-4 px-0">
+                    <div class="col-md-4 col-xl-2 px-0">
         
                         <h6 class="font-weight-bold mb-3 text-center text-lg-left">Member</h6>
                         <div class="white z-depth-1 px-2 pt-3 pb-0 members-panel-1 scrollbar-light-blue">
                             <ul class="list-unstyled friend-list">
-                                <li class="active grey lighten-3 p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>John Doe</strong>
-                                            <p class="last-message text-muted">Hello, Are you there?</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Just now</p>
-                                            <span class="badge badge-danger float-right">1</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                <?php
+                                foreach($allUsers as $user){ ?>
                                 <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
+                                    <a href="#" class="d-flex pl-2">
                                         <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
                                         <div class="text-small">
-                                            <strong>Danny Smith</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">5 min ago</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
+                                            <strong class="float-left pl-3"><?php echo $user->getName() ?></strong>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Alex Steward</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Yesterday</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-3" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Ashley Olsen</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Yesterday</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-4" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Kate Moss</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Yesterday</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Lara Croft</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Yesterday</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Brad Pitt</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">5 min ago</p>
-                                            <span class="text-muted float-right"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img(3).jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Ken Ditto</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Yesterday</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="p-2">
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img(2).jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <div class="text-small">
-                                            <strong>Marta Wozniak</strong>
-                                            <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
-                                        </div>
-                                        <div class="chat-footer">
-                                            <p class="text-smaller text-muted mb-0">Yesterday</p>
-                                            <span class="text-muted float-right"><i class="fa fa-mail-reply" aria-hidden="true"></i></span>
-                                        </div>
-                                    </a>
-                                </li>
+                                <?php } ?>
                             </ul>
                         </div>
         
@@ -151,7 +54,7 @@
                     <!-- Grid column -->
         
                     <!-- Grid column -->
-                    <div class="col-md-6 col-xl-8 pl-md-3 px-lg-auto px-0">
+                    <div class="col-md-8 col-xl-10 pl-md-5 px-lg-auto px-0">
         
                         <div class="chat-message">
         
