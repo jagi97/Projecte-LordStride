@@ -49,15 +49,27 @@ class Message {
     }
 
     public function insertMessage() {
-    	$objDataMessage = new dataComment();
+        // echo "BR.insert </br>";
+    	$objDataMessage = new dataMessage();
         $resultado = $objDataMessage->insertMessage($this->idUsuario, $this->texto);
-	    return $resultado;
+        return $resultado;
     }
     
     public function viewMessages($idUsuario) {
-        $objDataMessage = new dataComment();
+        $objDataMessage = new dataMessage();
         $resultado = $objDataMessage->viewMessages($idUsuario);
-        return $resultado;
+
+        if(!$resultado){
+            return false;
+        }
+        else{
+            $arayMessages = array();
+            foreach($resultado as $message){
+                $objMessage = new Message($message["numMensaje"],$message["idUsuario"],$message["texto"],$message["hora"]);
+                $arayMessages[] = $objMessage;
+            }
+        }
+        return $arayMessages;
     }
 }
 

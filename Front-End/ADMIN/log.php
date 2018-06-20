@@ -1,6 +1,7 @@
 <?php
-    require "/Applications/MAMP/htdocs/LordStride/Front-End/redirect.php";
-    session_start();
+   require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
+   require "/Applications/MAMP/htdocs/LordStride/Front-End/redirect.php";
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,12 +34,15 @@
 </html>
 
 <?php
-    $_SESSION["user"] = $_POST["user"];
-    $_SESSION["pass"] = $_POST["pass"];
+    $_SESSION["username"] = $_POST["user"];
+    $_SESSION["password"] = $_POST["pass"];
 
 	if(isset($_POST["user"])& isset($_POST["pass"]) & isset($_POST["btn"])){
-        if($_SESSION["user"] === "admin" & $_SESSION["pass"] ==="1234"){
-            redirect("admin.php");
+        $User = new User();
+        $usuarioExist = $User->signinUser($_SESSION['username'], $_SESSION['password']);
+    
+        if($usuarioExist){
+            redirect("admin.php");			
         }
-    }
+}
 ?>
