@@ -7,15 +7,15 @@ class Comment {
 	private $idComentario;
     private $numPost;
     private $idUsuario;
-    private $hora;
     private $texto;
+    private $hora;
 
-    public function __construct ($idComentario=null, $numPost=null, $idUsuario=null, $hora=null, $texto=null) {
+    public function __construct ($idComentario=null, $numPost=null, $idUsuario=null, $texto=null, $hora=null) {
         $this->idComentario = $idComentario;
         $this->numPost = $numPost;
         $this->idUsuario = $idUsuario;
-        $this->hora = $hora;
         $this->texto = $texto;        
+        $this->hora = $hora;
     }
 
     public function getIdComentario() {
@@ -58,7 +58,7 @@ class Comment {
         $this->texto = $texto;
     }
 
-    public function insertComment($numPost, $idUsuario, $texto) {
+    public function insertComment() {
     	$objDataComment = new dataComment();
         $resultado = $objDataComment->insertComment($this->numPost, $this->idUsuario, $this->texto);
 	    return $resultado;

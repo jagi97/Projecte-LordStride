@@ -16,8 +16,10 @@ html {
         color: #9d2121; }
         html body header .navbar a:hover {
           color: #9d2121; }
-    html body section {
-      width: 90%; }
+    html body main .caja {
+      height: 75vh; }
+      html body main .caja section {
+        width: 90%; }
     html body footer {
       width: 100%;
       position: fixed;

@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a class="nav-link" href="../SERVICIOS/service.php">SERVICES</a>
+            <a class="nav-link" href="../SERVICIOS/service.php">TELL US</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="blog.php">BLOG</a>
@@ -168,83 +168,64 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
       <ul class="comment-section">
+        <li class="comment user-comment">
 
-    <li class="comment user-comment">
-
-              <div class="info">
-                  <a href="#">Anie Silverston</a>
-                  <span>4 hours ago</span>
-              </div>
-
-              <a class="avatar" href="#">
-                  <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
-              </a>
-
-              <p>Suspendisse gravida sem?</p>
-
-    </li>
-
-    <li class="comment author-comment">
-
-              <div class="info">
-                  <a href="#">Jack Smith</a>
-                  <span>3 hours ago</span>
-              </div>
-
-              <a class="avatar" href="#">
-                  <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
-              </a>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor.</p>
-
-    </li>
-
-    <li class="comment user-comment">
-
-              <div class="info">
-                  <a href="#">Bradley Jones</a>
-                  <span>1 hour ago</span>
-              </div>
-
-              <a class="avatar" href="#">
-                  <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
-              </a>
-
-              <p>Suspendisse gravida sem sit amet molestie portitor?</p>
-
-    </li>
-
-          <li class="comment author-comment">
-
-              <div class="info">
-                  <a href="#">Jack Smith</a>
-                  <span>1 hour ago</span>
-              </div>
-
-              <a class="avatar" href="#">
-                  <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
-              </a>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor.</p>
-
-          </li>
-
-          <li class="write-new">
-
-              <form action="#" method="post">
-
-                  <textarea placeholder="Write your comment here" name="comment"></textarea>
-
-                  <div>
-                      <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
-                      <button type="submit">Submit</button>
+                  <div class="info">
+                      <a href="#">Anie Silverston</a>
+                      <span>4 hours ago</span>
                   </div>
 
-              </form>
+                  <a class="avatar" href="#">
+                      <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
+                  </a>
 
-          </li>
+                  <p>Suspendisse gravida sem?</p>
 
-    </ul>
+        </li>
+        <li class="comment user-comment">
+
+                  <div class="info">
+                      <a href="#">Bradley Jones</a>
+                      <span>1 hour ago</span>
+                  </div>
+
+                  <a class="avatar" href="#">
+                      <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
+                  </a>
+
+                  <p>Suspendisse gravida sem sit amet molestie portitor?</p>
+
+        </li>
+        <li class="comment author-comment">
+
+            <div class="info">
+                <a href="#">Jack Smith</a>
+                <span>1 hour ago</span>
+            </div>
+
+            <a class="avatar" href="#">
+                <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+            </a>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor.</p>
+
+        </li>
+
+        <li class="write-new">
+
+            <form action="#" method="post">
+
+                <input placeholder="Write your comment here" name="comment"></input>
+
+                <div>
+                    <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
+                    <button type="submit" name="send">Submit</button>
+                </div>
+
+            </form>
+
+        </li>
+      </ul>
     </div>
   </div>
 </div>  
@@ -268,7 +249,7 @@
             </div>
             <div class="col">
               <ul>
-                <a href="../SERVICIOS/service.php"><li>SERVICES</li></a>
+                <a href="../SERVICIOS/service.php"><li>TELL US</li></a>
                 <a href="blog.php"><li>BLOG</li></a>
               </ul>
             </div>

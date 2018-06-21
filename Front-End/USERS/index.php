@@ -63,7 +63,7 @@
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
             <li><a href="index.php"><i class="fas fa-home"></i>User's Info                             </a></li>
             <li><a href="message.php"><i class="fas fa-comments"></i>Messages                             </a></li>
-            <li><a href="cart.php"> <i class="fas fa-shopping-cart"></i>Cart                             </a></li>
+            <li><a href="posts.php"><i class="fab fa-blogger"></i>Posts                             </a></li>
           </ul>
         </div>
       </div>

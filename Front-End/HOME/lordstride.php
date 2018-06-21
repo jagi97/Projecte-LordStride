@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="../SERVICIOS/service.php">SERVICES</a>
+              <a class="nav-link" href="../SERVICIOS/service.php">TELL US</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../BLOG/blog.php">BLOG</a>
@@ -58,7 +58,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col">
-            <form action="../CONTACTO/contact.php">
+            <form action="../SERVICIOS/service.php">
             <button>
               <p>Cúal es tu proyecto?</p>
             </button>
@@ -186,7 +186,7 @@
           </div>
           <div class="col">
             <ul>
-              <a href="../SERVICIOS/service.php"><li>SERVICES</li></a>
+              <a href="../SERVICIOS/service.php"><li>TELL US</li></a>
               <a href="../BLOG/blog.php"><li>BLOG</li></a>
             </ul>
           </div>

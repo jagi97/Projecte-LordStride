@@ -1,8 +1,3 @@
-<?php
-
-require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +22,7 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-          <a class="nav-link" href="../SERVICIOS/service.php">SERVICES</a>
+          <a class="nav-link" href="../SERVICIOS/service.php">TELL US</a>
           </li>
           <li class="nav-item">
           <a class="nav-link" href="../BLOG/blog.php">BLOG</a>
@@ -50,7 +45,7 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
     </header>
     <main>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row caja">
               <div class="col">
                 <section>
                   <h2>¿DÓNDE ESTAMOS?</h2>
@@ -59,29 +54,6 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
                   <p>Email: salesianssarria.com</p>
                   <p>Telf: 932 03 11 00</p>
                   <p>Horario: 8:00 - 21:00</p>
-                </section>
-                <section>
-                  <h2>EXPLÍCANOS TU PROYECTO</h2>
-                  <form method="post">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Nombre" name="firstName">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apellido" name="lastName">
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <input type="password" class="form-control" id="inputPassword4" placeholder="Telf" name="phone">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="¿Qué tipo de página quieres? ¿Qué te interesa? ¿Precio?"  name="texto"></input>
-                      </div>
-                      <button type="submit" class="btn btn-primary" name="send">SEND</button>
-                    </form>
                 </section>
               </div>
               <div id="map"></div>
@@ -107,7 +79,7 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
           </div>
           <div class="col">
             <ul>
-              <a href="../SERVICIOS/service.php"><li>SERVICES</li></a>
+              <a href="../SERVICIOS/service.php"><li>TELL US</li></a>
               <a href="../BLOG/blog.php"><li>BLOG</li></a>
             </ul>
           </div>
@@ -144,18 +116,3 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
       async defer></script>
 </body>
 </html>
-<?php
-
-	if(isset($_POST["send"]) & isset($_POST["texto"]) & isset($_POST["firstName"]) & isset($_POST["lastName"]) & isset($_POST["email"]) & isset($_POST["phone"])){
-
-    $texto = $_POST["texto"];
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-
-    $newFormulario = new Form(null,$texto,  $firstName, $lastName,  $email, $phone);
-    $enviaBD = $newFormulario->insertFormulario();
-  }
-  
-?>

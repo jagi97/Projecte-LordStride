@@ -1,3 +1,8 @@
+<?php
+
+require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
+
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -23,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a class="nav-link" href="service.php">SERVICES</a>
+            <a class="nav-link" href="service.php">TELL US</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="../BLOG/blog.php">BLOG</a>
@@ -45,107 +50,36 @@
         </nav>
       </header>
     <main>
-      <div class="container">
-        <div class="row">
-          <h2>Plantillas</h2>
-        </div>
-        <div class="row">
-          <div class="col">
-            <img src="../HOME/multimedia/templ1.png" class="img-thumbnail rounded float-left" alt="...">
-          </div>
-          <div class="col">
-            <form action="">
-                <select name="" id="">
-                    <option value="">Básica</option>
-                    <option value="">Responsive</option>
-                    <option value="">Animaciones</option>
-                  </select>
+    <section>
+    <div class="container-fluid">
+       <div class="row">
+         <div class="col">
+          <h2>EXPLÍCANOS TU PROYECTO</h2>
+          <form method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Nombre" name="firstName">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apellido" name="lastName">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="password" class="form-control" id="inputPassword4" placeholder="Telf" name="phone">
+                </div>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="¿Qué tipo de página quieres? ¿Qué te interesa? ¿Precio?"  name="texto"></input>
+              </div>
+              <button type="submit" class="btn btn-primary" name="send">SEND</button>
             </form>
-            <form action="">
-              <select name="" id="">
-                <option value="">Plantilla 1</option>
-                <option value="">Plantilla 2</option>
-                <option value="">Plantilla 3</option>
-                <option value="">Plantilla 4</option>
-                <option value="">Plantilla 5</option>
-              </select>
-              <input type="button" value="Añadir a carrito">
-            </form>
-          </div>
-        </div>
-        
-      </div>
-      <div class="container">
-        <div class="row">
-          <h2>Planes de Servicio</h2>
-        </div>
-        <div class="row flex-items-xs-middle flex-items-xs-center">
-          
-          <!-- Table #1  -->
-          <div class="col-xs-12 col-lg-4">
-            <div class="card text-xs-center">
-              <div class="card-header">
-                <h3 class="display-2"><span class="currency">$</span>699</h3>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title"> 
-                  My Web Básico
-                </h4>
-                <ul class="list-group">
-                  <li class="list-group-item">4 apartados</li>
-                  <li class="list-group-item">Imágenes profesionales</li>
-                  <li class="list-group-item">Redacción de contenidos</li>
-                  <li class="list-group-item">Sin blog</li>
-                  <li class="list-group-item">Sin estrategia SEO</li>
-                </ul>
-                <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-          <!-- Table #1  -->
-          <div class="col-xs-12 col-lg-4">
-            <div class="card text-xs-center">
-              <div class="card-header">
-                <h3 class="display-2"><span class="currency">$</span>1269</h3>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title"> 
-                  My Web PRO
-                </h4>
-                <ul class="list-group">
-                    <li class="list-group-item">6 apartados</li>
-                    <li class="list-group-item">Imágenes profesionales</li>
-                    <li class="list-group-item">Redacción de contenidos</li>
-                    <li class="list-group-item">Sin blog</li>
-                    <li class="list-group-item">Sin estrategia SEO</li>
-                  </ul>
-                <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-          <!-- Table #1  -->
-          <div class="col-xs-12 col-lg-4">
-            <div class="card text-xs-center">
-              <div class="card-header">
-                <h3 class="display-2"><span class="currency">$</span>2139</h3>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title"> 
-                  My Web Pro + SEO
-                </h4>
-                <ul class="list-group">
-                    <li class="list-group-item">8 apartados</li>
-                    <li class="list-group-item">Imágenes profesionales</li>
-                    <li class="list-group-item">Redacción de contenidos</li>
-                    <li class="list-group-item">Blog</li>
-                    <li class="list-group-item"><i class="fas fa-star"></i> Estrategia SEO</li>
-                  </ul>
-                <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
+    </div>
+
     </main>
     <footer>
         <div class="container-fluid">
@@ -166,7 +100,7 @@
             </div>
             <div class="col">
               <ul>
-                <a href="service.php"><li>SERVICES</li></a>
+                <a href="service.php"><li>TELL US</li></a>
                 <a href="../BLOG/blog.php"><li>BLOG</li></a>
               </ul>
             </div>
@@ -200,3 +134,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </body>
 </html>
+<?php
+
+	if(isset($_POST["send"]) & isset($_POST["texto"]) & isset($_POST["firstName"]) & isset($_POST["lastName"]) & isset($_POST["email"]) & isset($_POST["phone"])){
+
+    $texto = $_POST["texto"];
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+
+    $newFormulario = new Form(null,$texto,  $firstName, $lastName,  $email, $phone);
+    $enviaBD = $newFormulario->insertFormulario();
+  }
+  
+?>
