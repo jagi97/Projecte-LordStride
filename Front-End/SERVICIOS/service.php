@@ -71,14 +71,14 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
                 </div>
               </div>
               <div class="form-group">
-                <input class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="¿Qué tipo de página quieres? ¿Qué te interesa? ¿Precio?"  name="texto"></input>
+                <input onfocusout="apareceForm()" class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="¿Qué tipo de página quieres? ¿Qué te interesa? ¿Precio?"  name="texto"></input>
               </div>
               <button type="submit" class="btn btn-primary" name="send">SEND</button>
             </form>
-          </section>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     </main>
     <footer>
@@ -132,20 +132,21 @@ require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/myfunctions.js"></script>
   </body>
 </html>
 <?php
 
-	if(isset($_POST["send"]) & isset($_POST["texto"]) & isset($_POST["firstName"]) & isset($_POST["lastName"]) & isset($_POST["email"]) & isset($_POST["phone"])){
-
-    $texto = $_POST["texto"];
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-
-    $newFormulario = new Form(null,$texto,  $firstName, $lastName,  $email, $phone);
-    $enviaBD = $newFormulario->insertFormulario();
-  }
+if(isset($_POST["send"]) & isset($_POST["texto"]) & isset($_POST["firstName"]) & isset($_POST["lastName"]) & isset($_POST["email"]) & isset($_POST["phone"])){
   
+  $texto = $_POST["texto"];
+  $firstName = $_POST["firstName"];
+  $lastName = $_POST["lastName"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+  
+  $newFormulario = new Form(null,$texto,  $firstName, $lastName,  $email, $phone);
+  $enviaBD = $newFormulario->insertFormulario();
+}
+
 ?>

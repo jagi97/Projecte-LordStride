@@ -122,28 +122,6 @@ a, a:hover{
 .contimg{
     @include mgpddzero();
 }
-.imagenes{
-    @include mgpddzero(0px 30px);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: stretch;
-    align-items: flex-start;
-    div {
-        width: 23%;
-        height: 15vh;
-        order: 0;
-        flex: 0 1 auto;
-        align-self: auto;
-        overflow: hidden;
-        margin: 1%;
-        border-radius: 5px;
-        img {
-            width: 100%;
-        } 
-    }
-}
 
 // OVERFLOW: HIDDEN
 
@@ -227,3 +205,14 @@ footer{
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(157, 33, 33)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+/* fluid 5 columns */
+.grid-sizer, .grid-item { float:left; width: 25%; }
+.grid-item-content {
+    width:  100%;
+    transition: width 0.4s, height 0.4s;
+  }
+  /* item has expanded size */
+  .grid-item.is-expanded {
+    width: 50%;
+  }
+  

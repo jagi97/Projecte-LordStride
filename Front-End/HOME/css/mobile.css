@@ -3,23 +3,23 @@
     background-color: #EDF3F3;
     margin: 0;
     padding: 0; }
-    html body main .container-fluid:last-child {
-      display: none; }
 
-  main .firstcontainer .row div {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
-    main .firstcontainer .row div:last-child {
-      padding-bottom: 10px; }
-    main .firstcontainer .row div * {
-      padding: 4px 0px; }
-
-  .imagenes div {
-    width: 90%;
-    height: 17vh;
-    margin: 1% auto; }
+  main {
+    /* fluid 5 columns */ }
+    main .firstcontainer .row div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      main .firstcontainer .row div:last-child {
+        padding-bottom: 10px; }
+      main .firstcontainer .row div * {
+        padding: 4px 0px; }
+    main .grid-sizer, main .grid-item {
+      float: left;
+      width: 100%; }
+    main .grid-item.is-expanded {
+      width: 100%; }
 
   footer .footer {
     display: block;

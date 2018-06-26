@@ -4,40 +4,8 @@
             background-color: #EDF3F3;
             margin: 0;
             padding: 0;
-            main .container-fluid:last-child{
-                display: inline-block;
-            } 
+            /* fluid 5 columns */
+            .grid-sizer, .grid-item { float:left; width: 50%; }
         }
-    }
-    .contimg{
-        display: none;
-    }
-
-    .well{
-        background: transparent;
-        .carousel {
-            margin-bottom: 0;
-            padding: 0 40px 30px 40px;
-            .carousel-indicators {
-                margin: 0 auto;
-                top: auto;
-                bottom: 0px;
-                li {
-                    background: #c0c0c0;
-                }
-                .active {
-                    background: #333333;
-                }
-            }
-            .carousel-inner .thumbnail img{
-                width: 800px;
-            }
-        }
-    }
-    .carousel-control {
-        left: -12px;
-    }
-    .carousel-control.right {
-        right: -12px;
     }
 }

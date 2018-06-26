@@ -21,30 +21,42 @@ html{
           }
         }
         footer{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            .footer{
-                flex-wrap: nowrap;
-                justify-content: space-between;
-                .col{
-                    width: 25%;
-                }
-            }
-            .logo{
-                width: 20%;
-                opacity: 0.5;
-                border-radius: 20%;
-            }
-            .iconos, .copyright{
-                .row{
-                    width: 25%;
-                    margin: 0 auto;
-                    justify-content: space-between;
-                }
-            }
-        }
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          padding: 20px;
+          padding-top: 50px;
+          padding-bottom: 10px;
+          color: black;
+          font-size: 14px;
+          >div:not(:first-child){
+              padding-top: 25px;
+          }
+          .footer{
+              flex-wrap: nowrap;
+              justify-content: space-between;
+              .col{
+                  width: 30%;
+                  li{
+                      text-decoration: none;
+                      color: black;
+                      list-style: none;
+                  }
+              }
+          }
+          .logo{
+              width: 25px;
+              opacity: 0.5;
+              border-radius: 20%;
+          }
+          .iconos, .copyright{
+              .row{
+                  width: 30%;
+                  margin: 0 auto;
+                  justify-content: space-between;
+              }
+          }
+      }
     }
 }
 
@@ -192,4 +204,29 @@ body {
 }
 .custom-toggler .navbar-toggler-icon {
 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(157, 33, 33)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+a, a:hover{
+  color: rgb(37, 33, 33);
+  text-decoration: none;
+  list-style: none;
+}
+section .col{
+    h2{
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+    form{
+    width: 80vw;
+    margin: 0 auto;
+      input{
+        height:70px;
+      }
+      button{
+        position: relative;
+        left: -285px;
+        transition: 0.5s;
+      }
+  }
 }

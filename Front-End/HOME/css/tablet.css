@@ -2,33 +2,10 @@
   html body {
     background-color: #EDF3F3;
     margin: 0;
-    padding: 0; }
-    html body main .container-fluid:last-child {
-      display: inline-block; }
-
-  .contimg {
-    display: none; }
-
-  .well {
-    background: transparent; }
-    .well .carousel {
-      margin-bottom: 0;
-      padding: 0 40px 30px 40px; }
-      .well .carousel .carousel-indicators {
-        margin: 0 auto;
-        top: auto;
-        bottom: 0px; }
-        .well .carousel .carousel-indicators li {
-          background: #c0c0c0; }
-        .well .carousel .carousel-indicators .active {
-          background: #333333; }
-      .well .carousel .carousel-inner .thumbnail img {
-        width: 800px; }
-
-  .carousel-control {
-    left: -12px; }
-
-  .carousel-control.right {
-    right: -12px; } }
+    padding: 0;
+    /* fluid 5 columns */ }
+    html body .grid-sizer, html body .grid-item {
+      float: left;
+      width: 50%; } }
 
 /*# sourceMappingURL=tablet.css.map */

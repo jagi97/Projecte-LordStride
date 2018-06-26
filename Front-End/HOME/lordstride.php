@@ -91,80 +91,24 @@
             </div>
           </div>
       </div>
-      <div class="container-fluid contimg">
-        <div class="row imagenes">
-              <div><img src="multimedia/templ1.png" alt=""></div>
-              <div><img src="multimedia/templ2.jpeg" alt=""></div>
-              <div><img src="multimedia/templ3.jpeg" alt=""></div>
-              <div><img src="multimedia/templ4.jpeg" alt=""></div>           
-              <div><img src="multimedia/templ5.jpeg" alt=""></div>
-              <div><img src="multimedia/templ6.jpeg" alt=""></div>
-              <div><img src="multimedia/templ7.jpeg" alt=""></div>
-              <div><img src="multimedia/templ8.jpeg" alt=""></div>           
-              <div><img src="multimedia/templ9.jpeg" alt=""></div>
-              <div><img src="multimedia/templ10.jpeg" alt=""></div>
-              <div><img src="multimedia/tempL11.jpeg" alt=""></div>
-              <div><img src="multimedia/templ12.jpeg" alt=""></div>           
-              <div><img src="multimedia/templ13.jpeg" alt=""></div>
-              <div><img src="multimedia/templ14.jpeg" alt=""></div>
-              <div><img src="multimedia/templ15.jpeg" alt=""></div>
-              <div><img src="multimedia/templ16.jpeg" alt=""></div>           
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="span12">
-            <div class="well"> 
-              <div id="myCarousel" class="carousel slide">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row-fluid">
-                      <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ1.png" alt="Image" style="max-width:100%;" /></a></div>
-                      <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ2.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                      <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ3.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                      <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ4.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                    </div><!--/row-fluid-->
-                  </div><!--/item-->
-                    
-                  <div class="carousel-item">
-                    <div class="row-fluid">
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ5.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ6.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ7.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ8.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                      </div><!--/row-fluid-->
-                  </div><!--/item-->
-                    
-                  <div class="carousel-item">
-                    <div class="row-fluid">
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ9.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ10.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ11.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ12.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                      </div><!--/row-fluid-->
-                  </div><!--/item-->
-                  <div class="carousel-item">
-                    <div class="row-fluid">
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ13.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ14.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ15.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                        <div class="span3"><a href="#x" class="thumbnail"><img src="multimedia/templ16.jpeg" alt="Image" style="max-width:100%;" /></a></div>
-                      </div><!--/row-fluid-->
-                  </div><!--/item-->
-                </div><!--/carousel-inner--> 
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-              </div><!--/myCarousel-->        
-            </div><!--/well-->   
-          </div>
-        </div>
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ1.png" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ2.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ3.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ4.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ5.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ6.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ7.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ8.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ9.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ10.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/tempL11.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ12.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ13.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ14.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ15.jpeg" alt=""></div></div>
+        <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ16.jpeg" alt=""></div></div>
       </div>
     </main>
     <footer>
@@ -221,6 +165,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
     <script src="js/home.js"></script>
+    <script>
+      var $grid = $('.grid').imagesLoaded(function(){
+        $grid.masonry({
+        // options
+        itemSelector: '.grid-item',
+        // use element for option
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        horizontalOrder: false,
+        transitionDuration: 1050
+        });
+      });
+      $grid.on( 'click', '.grid-item-content', function( event ) {
+        var $clickado = $( event.currentTarget ).parent('.grid-item');
+        $clickado.toggleClass('is-expanded');
+
+        $grid.masonry();
+      });
+      $( window ).scroll(function() {
+        $clickado.toggleClass('is-expanded');
+      });
+      
+    </script>
+    
   </body>
 </html>

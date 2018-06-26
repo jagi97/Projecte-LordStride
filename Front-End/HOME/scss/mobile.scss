@@ -4,12 +4,9 @@
             background-color: #EDF3F3;
             margin: 0;
             padding: 0;
-            main .container-fluid:last-child{
-                display: none;
-            } 
         }
     }
-
+    
     main{
         .firstcontainer .row div{
             flex-direction: column;
@@ -23,15 +20,11 @@
                 padding: 4px 0px,
             }
         }
+        /* fluid 5 columns */
+        .grid-sizer, .grid-item {float:left; width: 100%; }
+        .grid-item.is-expanded { width: 100%; }
     }
 
-    .imagenes{
-        div {
-            width: 90%;
-            height: 17vh;
-            margin: 1% auto;
-        }
-    }
 
     footer{
         .footer{
