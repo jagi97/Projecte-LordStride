@@ -1,6 +1,6 @@
 <?php
 
-require_once "/Applications/MAMP/htdocs/LordStride/Data/dataComment.php";
+require_once "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Data\dataComment.php";
 
 class Comment {
 

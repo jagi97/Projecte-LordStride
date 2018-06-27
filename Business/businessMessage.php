@@ -1,6 +1,6 @@
 <?php
 
-require_once "/Applications/MAMP/htdocs/LordStride/Data/dataMessage.php";
+require_once "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Data\dataMessage.php";
 
 class Message {
 
@@ -9,9 +9,10 @@ class Message {
     private $texto;
     private $hora;
 
-    public function __construct ( $numMensaje=null, $idUsuario=null,  $texto=null, $hora=null) {
+    public function __construct ( $numMensaje=null, $idUsuario=null, $idConversacion=null,  $texto=null, $hora=null) {
         $this->numMensaje = $numMensaje;
         $this->idUsuario = $idUsuario;
+        $this->idConversacion = $idConversacion;
         $this->texto = $texto;        
         $this->hora = $hora;
     }
@@ -22,6 +23,10 @@ class Message {
 
     public function getIdUsuario() {
         return $this->idUsuario;
+    }
+
+    public function getIdConversacion() {
+        return $this->idConversacion;
     }
     
     public function getTexto() {
@@ -40,6 +45,10 @@ class Message {
         $this->idUsuario = $idUsuario;
     }
 
+    public function setIdConversacion($idConversacion) {
+        $this->idConversacion = $idConversacion;
+    }
+
     public function setTexto($texto) {
         $this->texto = $texto;
     }
@@ -51,13 +60,13 @@ class Message {
     public function insertMessage() {
         // echo "BR.insert </br>";
     	$objDataMessage = new dataMessage();
-        $resultado = $objDataMessage->insertMessage($this->idUsuario, $this->texto);
+        $resultado = $objDataMessage->insertMessage($this->idUsuario, $this->idConversacion, $this->texto);
         return $resultado;
     }
     
-    public function viewMessages($idUsuario) {
+    public function viewMessages($idConversacion) {
         $objDataMessage = new dataMessage();
-        $resultado = $objDataMessage->viewMessages($idUsuario);
+        $resultado = $objDataMessage->viewMessages($idConversacion);
 
         if(!$resultado){
             return false;
@@ -65,7 +74,7 @@ class Message {
         else{
             $arayMessages = array();
             foreach($resultado as $message){
-                $objMessage = new Message($message["numMensaje"],$message["idUsuario"],$message["texto"],$message["hora"]);
+                $objMessage = new Message($message["numMensaje"],$message["idUsuario"],$message["idConversacion"],$message["texto"],$message["hora"]);
                 $arayMessages[] = $objMessage;
             }
         }

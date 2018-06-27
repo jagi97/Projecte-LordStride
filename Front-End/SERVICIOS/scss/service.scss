@@ -224,9 +224,12 @@ section .col{
         height:70px;
       }
       button{
+        width: 100px;
+        height: 70px;
+        border-radius: 5%;
         position: relative;
         left: -285px;
-        transition: 0.5s;
+        transition: 2s;
       }
   }
 }

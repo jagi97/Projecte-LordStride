@@ -1,8 +1,8 @@
 <?php
-  require "/Applications/MAMP/htdocs/LordStride/Business/businessPost.php";
-  require "/Applications/MAMP/htdocs/LordStride/Business/businessComment.php";
-  require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
-  require "/Applications/MAMP/htdocs/LordStride/Front-End/redirect.php";
+  require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessPost.php";
+  require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessComment.php";
+  require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessUser.php";
+  require 'C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Front-End\redirect.php';
   session_start();
 
   $idChat= $_GET["idNumPost"];
@@ -164,7 +164,7 @@
         
                         <ul class="post-footer">
                           <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes1 ?></a></li>
-                          <li><a class="commentarioo" href="posts.php?idNumPost=1" ><i class="fas fa-comment"></i><?php echo $comments1 ?> <span style="display: none">1</span></a></li>
+                          <li><a href="posts.php?idNumPost=1" ><i class="fas fa-comment"></i><?php echo $comments1 ?> <span style="display: none">1</span></a></li>
                           <li><a href="#"><i class="fas fa-eye"></i><?php echo $viewed1 ?></a></li>
                         </ul>
                       </div><!-- blog-info -->
@@ -189,7 +189,7 @@
         
                         <ul class="post-footer">
                           <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes2 ?></a></li>
-                          <li><a class="commentarioo" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments2 ?></a></li>
+                          <li><ahref="posts.php?idNumPost=2" ><i class="fas fa-comment"></i><?php echo $comments2 ?></a></li>
                           <li><a href="#"><i class="fas fa-eye"></i><?php echo $likes2 ?></a></li>
                         </ul>
                       </div><!-- blog-info -->
@@ -215,7 +215,7 @@
         
                       <ul class="post-footer">
                         <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes3 ?></a></li>
-                        <li><a class="commentarioo" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments3 ?></a></li>
+                        <li><a  href="posts.php?idNumPost=3"><i class="fas fa-comment"></i><?php echo $comments3 ?></a></li>
                         <li><a href="#"><i class="fas fa-eye"></i><?php echo $likes3 ?></a></li>
                       </ul>
         
@@ -284,12 +284,6 @@
     <script src="js/charts-home.js"></script>
     <!-- Main File-->
     <script src="js/front.js"></script>
-    <script>
-      $('.commentarioo').click(function(e) {
-        // var idNumPost = $('.commentarioo').index(this)) + 1;
-        // window.location.href = "/Applications/MAMP/htdocs/LordStride/Front-End/USERS/posts.php?idNumPost="+idNumPost;
-      });
-    </script>
   </body>
 </html>
 <?php

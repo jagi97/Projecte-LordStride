@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../multimedia/firewatch.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html .arrow, body .arrow {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+html h1, body h1 {
+  position: relative;
+  top: -45px;
+}
+
+html .container, body .container {
+  position: relative;
+}
+
+html .container .table, body .container .table {
+  text-align: center;
+}
+
+html .container .table td, body .container .table td {
+  vertical-align: middle;
+}
+
+html .container .table td img, body .container .table td img {
+  width: 200px;
+}
+/*# sourceMappingURL=comments.css.map */

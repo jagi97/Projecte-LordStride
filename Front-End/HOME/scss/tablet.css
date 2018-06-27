@@ -1,0 +1,13 @@
+@media (min-width: 426px) and (max-width: 950px) {
+  html body {
+    background-color: #EDF3F3;
+    margin: 0;
+    padding: 0;
+    /* fluid 5 columns */
+  }
+  html body .grid-sizer, html body .grid-item {
+    float: left;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=tablet.css.map */

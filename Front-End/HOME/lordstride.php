@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid firstcontainer">
+      <div class="container-fluid firstcontainer pt-5 pb-5">
           <div class="row">
             <div class="col-12 col-lg d-flex">
               <i class="fas fa-thermometer-full fa-3x social1"></i>
@@ -91,7 +91,7 @@
             </div>
           </div>
       </div>
-      <div class="grid">
+      <div class="grid pt-5">
         <div class="grid-sizer"></div>
         <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ1.png" alt=""></div></div>
         <div class="grid-item"><div class="grid-item-content"><img src="multimedia/templ2.jpeg" alt=""></div></div>

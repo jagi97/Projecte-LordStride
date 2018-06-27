@@ -228,13 +228,11 @@ section .col form input {
 }
 
 section .col form button {
-  text-align: center;
-  font-size: 30px;
-  width: 120px;
+  width: 100px;
   height: 70px;
-  border-radius: 7%;
+  border-radius: 5%;
   position: relative;
-  left: -485px;
-  transition: 0.7s;
+  left: -285px;
+  transition: 2s;
 }
 /*# sourceMappingURL=service.css.map */

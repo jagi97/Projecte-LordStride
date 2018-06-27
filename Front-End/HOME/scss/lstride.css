@@ -1,0 +1,229 @@
+html {
+  font-size: 16px;
+}
+
+html body {
+  background-color: #EDF3F3;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+html body header .navbar {
+  width: 100%;
+  height: 60px;
+}
+
+html body header .navbar a {
+  color: #9d2121;
+}
+
+html body header .navbar a:hover {
+  color: #9d2121;
+}
+
+html body header a {
+  color: #9d2121;
+}
+
+html body header a:hover {
+  color: #9d2121;
+}
+
+html body main .container-fluid:last-child {
+  display: none;
+}
+
+html body main .container-fluid:first-child .col {
+  display: flex;
+  justify-content: center;
+}
+
+html body main .container-fluid:first-child .col button {
+  width: 350px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff309;
+  border-radius: 8px;
+}
+
+html body main .container-fluid:first-child .col button p {
+  margin-bottom: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+video {
+  width: 100%;
+  top: 0px;
+}
+
+a, a:hover {
+  color: #252121;
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #de5656;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(157, 33, 33)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-up {
+  top: -60px;
+}
+
+.container-fluid {
+  padding-top: 25px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.container-fluid .h2p {
+  padding-left: 15px;
+}
+
+.social1, .social2, .social3 {
+  padding: 14px 27px;
+  width: 93px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #0964c6;
+}
+
+.social1:hover, .social2:hover, .social3:hover {
+  background-color: #75d1fc;
+}
+
+.contimg {
+  margin: 0px;
+  padding: 0px 0px;
+}
+
+.sign {
+  width: 90px;
+  border-radius: 10%;
+  opacity: 0.5;
+}
+
+footer {
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: black;
+  font-size: 14px;
+}
+
+footer > div:not(:first-child) {
+  padding-top: 25px;
+}
+
+footer .footer {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+footer .footer .col {
+  width: 30%;
+}
+
+footer .footer .col li {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+footer .logo {
+  width: 25px;
+  opacity: 0.5;
+  border-radius: 20%;
+}
+
+footer .iconos .row, footer .copyright .row {
+  width: 30%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  float: right;
+  text-align: end;
+  width: 100px;
+}
+
+.navbar-nav .dropdown-menu {
+  padding-right: 20px;
+  text-align: end;
+  opacity: 0.9;
+  width: 185px;
+  position: relative;
+  top: -100px;
+  left: -185px;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    width: auto;
+  }
+  .navbar-nav .dropdown-menu {
+    opacity: 0.9;
+    width: 185px;
+    position: relative;
+    top: 47px;
+    left: -70px;
+  }
+}
+
+.collapse {
+  overflow: visible;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #de5656;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(157, 33, 33)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* fluid 5 columns */
+.grid-sizer, .grid-item {
+  float: left;
+  width: 25%;
+}
+
+.grid-item-content {
+  width: 100%;
+  transition: width 0.4s, height 0.4s;
+}
+
+/* item has expanded size */
+.grid-item.is-expanded {
+  width: 50%;
+}
+/*# sourceMappingURL=lstride.css.map */

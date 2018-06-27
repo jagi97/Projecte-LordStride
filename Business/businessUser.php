@@ -1,7 +1,7 @@
 <?php
 
 //  require "../Data/dataUser.php";
-require "/Applications/MAMP/htdocs/LordStride/Data/dataUser.php";
+require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Data\dataUser.php";
 
 class User {
 

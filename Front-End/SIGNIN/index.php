@@ -1,5 +1,5 @@
 <?php
-   require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
+   require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessUser.php";
 	session_start();
 ?>
 <!DOCTYPE html>

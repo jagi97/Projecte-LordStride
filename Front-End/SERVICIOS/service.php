@@ -1,6 +1,6 @@
 <?php
 
-require "/Applications/MAMP/htdocs/LordStride/Business/businessForm.php";
+require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessForm.php";
 
 ?>
 <!doctype html>

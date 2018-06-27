@@ -1,26 +1,29 @@
 <?php
-   require "/Applications/MAMP/htdocs/LordStride/Business/businessPost.php";
-   require "/Applications/MAMP/htdocs/LordStride/Business/businessComment.php";
+   require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessPost.php";
+   require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessComment.php";
 
+    $idChat= $_GET["idNumPost"];
 
-  $posts = new Post();
-  $mostrarPost1 = $posts->viewPost(1);
-  $mostrarPost2 = $posts->viewPost(2);
-  $mostrarPost3 = $posts->viewPost(3);
+    $posts = new Post();
+    $mostrarPost1 = $posts->viewPost(1);
+    $mostrarPost2 = $posts->viewPost(2);
+    $mostrarPost3 = $posts->viewPost(3);
 
-  $likes1 = $mostrarPost1->getLikes();
-  $viewed1 = $mostrarPost1->getViewed();
+    $likes1 = $mostrarPost1->getLikes();
+    $viewed1 = $mostrarPost1->getViewed();
 
-  $likes2 = $mostrarPost2->getLikes();
-  $viewed2 = $mostrarPost2->getViewed();
+    $likes2 = $mostrarPost2->getLikes();
+    $viewed2 = $mostrarPost2->getViewed();
 
-  $likes3 = $mostrarPost3->getLikes();
-  $viewed4 = $mostrarPost3->getViewed();
+    $likes3 = $mostrarPost3->getLikes();
+    $viewed4 = $mostrarPost3->getViewed();
 
-  $comments = new Comment();
-  $comments1 = $comments->numComments(1);
-  $comments2 = $comments->numComments(2);
-  $comments3 = $comments->numComments(3);
+    $comments = new Comment();
+    $comments1 = $comments->numComments(1);
+    $comments2 = $comments->numComments(2);
+    $comments3 = $comments->numComments(3);
+
+    $allComments1 = $comments->viewComments($idChat);
 
 ?>
 <!DOCTYPE html>
@@ -80,28 +83,20 @@
     <main>
         <section class="blog-area section">
             <div class="container">
-        
               <div class="row">
-        
                 <div class="col-lg-4 col-md-6">
                   <div class="card h-100">
                     <div class="single-post post-style-1">
-        
                       <div class="blog-image"><img src="multimedia/blog-1-1000x600.jpg" alt="Blog Image"></div>
-        
                       <div class="avatar"><img src="multimedia/jagi.jpg" alt="Profile Image"></div>
-        
                       <div class="blog-info">
-        
                         <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
                         Concepts in Physics?</b></a></h4>
-                        
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                           ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-        
                         <ul class="post-footer">
                           <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes1 ?></a></li>
-                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments1 ?></a></li>
+                          <li><a class="commentarioo" href="blog.php?idNumPost=1" ><i class="fas fa-comment"></i><?php echo $comments1 ?> <span style="display: none">1</span></a></li>
                           <li><a href="#"><i class="fas fa-eye"></i><?php echo $viewed1 ?></a></li>
                         </ul>
                       </div><!-- blog-info -->
@@ -112,118 +107,70 @@
                 <div class="col-lg-4 col-md-6">
                   <div class="card h-100">
                     <div class="single-post post-style-1">
-        
                       <div class="blog-image"><img src="multimedia/audrey-jackson-260657.jpg" alt="Blog Image"></div>
-        
                       <div class="avatar"><img src="multimedia/jagi.jpg" alt="Profile Image"></div>
-        
                       <div class="blog-info">
                         <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
                           Concepts in Physics?</b></a></h4>
-
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-        
                         <ul class="post-footer">
                           <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes2 ?></a></li>
-                          <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments2 ?></a></li>
+                          <li><a  data-toggle="modal" href="#myModal"><i class="fas fa-comment"></i><?php echo $comments2 ?></a></li>
                           <li><a href="#"><i class="fas fa-eye"></i><?php echo $likes2 ?></a></li>
                         </ul>
                       </div><!-- blog-info -->
-        
-                    </div><!-- single-post -->
-        
-                  </div><!-- card -->
+                     </div><!-- single-post -->
+                   </div><!-- card -->
                 </div><!-- col-lg-4 col-md-6 -->
         
                 <div class="col-lg-4 col-md-6">
                   <div class="card h-100">
                     <div class="single-post post-style-1">
-        
                       <div class="blog-image"><img src="multimedia/pexels-photo-370474.jpeg" alt="Blog Image"></div>
-        
                       <div class="avatar"><img src="multimedia/jagi.jpg" alt="Profile Image"></div>
-        
                       <h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
                         Concepts in Physics?</b></a></h4>
-                      
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                           ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-        
                       <ul class="post-footer">
                         <li><a href="#"><i class="fas fa-heart"></i><?php echo $likes3 ?></a></li>
-                        <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-comment"></i><?php echo $comments3 ?></a></li>
+                        <li><a  href="blog.php?idNumPost=3"><i class="fas fa-comment"></i><?php echo $comments3 ?></a></li>
                         <li><a href="#"><i class="fas fa-eye"></i><?php echo $likes3 ?></a></li>
                       </ul>
-        
                     </div><!-- single-post -->
                   </div><!-- card -->
                 </div><!-- col-lg-4 col-md-6 -->
-                
-              </div><!-- row -->
+               </div><!-- row -->
             </div><!-- container -->
           </section><!-- section -->
     
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
       <ul class="comment-section">
-        <li class="comment user-comment">
-
-                  <div class="info">
-                      <a href="#">Anie Silverston</a>
-                      <span>4 hours ago</span>
-                  </div>
-
-                  <a class="avatar" href="#">
-                      <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
-                  </a>
-
-                  <p>Suspendisse gravida sem?</p>
-
-        </li>
-        <li class="comment user-comment">
-
-                  <div class="info">
-                      <a href="#">Bradley Jones</a>
-                      <span>1 hour ago</span>
-                  </div>
-
-                  <a class="avatar" href="#">
-                      <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
-                  </a>
-
-                  <p>Suspendisse gravida sem sit amet molestie portitor?</p>
-
-        </li>
+      <?php
+        foreach($allComments1 as $viewComment){ ?>
+            <li class="comment user-comment">
+            <div class="info">
+                <a href="#">Anie Silverston</a>
+                <span>4 hours ago</span>
+            </div>
+            <a class="avatar" href="#">
+                <img src="multimedia/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
+            </a>
+            <p>Suspendisse gravida sem?</p>
+          </li>
+      <?php } ?>
         <li class="comment author-comment">
-
             <div class="info">
                 <a href="#">Jack Smith</a>
                 <span>1 hour ago</span>
             </div>
-
             <a class="avatar" href="#">
                 <img src="multimedia/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
             </a>
-
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor.</p>
-
-        </li>
-
-        <li class="write-new">
-
-            <form action="#" method="post">
-
-                <input placeholder="Write your comment here" name="comment"></input>
-
-                <div>
-                    <img src="multimedia/avatar_user_2.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
-                    <button type="submit" name="send">Submit</button>
-                </div>
-
-            </form>
-
         </li>
       </ul>
     </div>
@@ -282,6 +229,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>
 </html>
+<?php
+
+if($idChat){ ?>
+  <script>
+    $(document).ready(function(){
+
+      $('#myModal').modal('show');
+});
+  </script>
+<?php
+}
+
+?>

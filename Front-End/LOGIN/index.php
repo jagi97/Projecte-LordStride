@@ -1,6 +1,6 @@
 <?php
-   require "/Applications/MAMP/htdocs/LordStride/Business/businessUser.php";
-   require "/Applications/MAMP/htdocs/LordStride/Front-End/redirect.php";
+   require "C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Business\businessUser.php";
+   require 'C:\Program Files (x86)\Ampps\apache\htdocs\UX-UI\Front-End\redirect.php';
 	session_start();
 ?>
 
